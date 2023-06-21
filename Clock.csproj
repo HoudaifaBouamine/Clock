@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4841313D-0CF2-467D-BFE8-472E9EE251D4}</ProjectGuid>
+    <ProjectGuid>{82316A19-8CB7-4483-A7AB-060D03FFA816}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Clock</RootNamespace>
     <AssemblyName>Clock</AssemblyName>
@@ -81,40 +81,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\reset_button.PNG" />
+    <None Include="stopwatch_start.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fla.PNG" />
+    <None Include="stopwatch_reset.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\flag.PNG" />
+    <None Include="stopwatch_pause.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\reset2.png" />
+    <None Include="stopwatch_flag.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Start.PNG" />
+    <None Include="img_smallwindow.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Flag3.png" />
+    <None Include="img_FullScreen1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Capture1.PNG" />
+    <None Include="img_fullscreen.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pause.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stopwatch_reset.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stopwatch_pause.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stopwatch_flag.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stopwatch_start.PNG" />
+    <None Include="img_CancelFullScreen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
