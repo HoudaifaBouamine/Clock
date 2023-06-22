@@ -233,8 +233,6 @@ namespace Clock
             //
 
 
-
-            btn_tab_stopwatch.Width = this.Width - tbc_main.Width;
         }
         class clsRatio
         {
@@ -512,7 +510,9 @@ namespace Clock
 
                 btn_FlagStopwatch.Visible = true;
                 btn_Smallwindow.Visible   = true;
-                lv_recordes.Visible = true;
+
+                if(lv_recordes.Items.Count > 0)
+                    lv_recordes.Visible = true;
 
 
                 btn_StartStopwatch.Location = new Point(btn_StartStopwatch.Location.X - btn_FlagStopwatch.Width / 2, btn_StartStopwatch.Location.Y);
@@ -537,8 +537,20 @@ namespace Clock
 
         private void main_form_Resize(object sender, EventArgs e)
         {
-            resize_controls_stopwatch();
-        
+            if (tbc_main.SelectedIndex == 2)
+            {
+                resize_controls_stopwatch();
+                resize_controls_stopwatch();
+            }
+
+
+
+
+            btn_tab_stopwatch.Width = this.Width - tbc_main.Width;
+            btn_tab_timer.Width = this.Width - tbc_main.Width;
+            btn_tab_alarm.Width = this.Width - tbc_main.Width;
+            btn_tab_clock.Width = this.Width - tbc_main.Width;
+
         }
 
         private void lv_recordes_SelectedIndexChanged(object sender, EventArgs e)
@@ -556,13 +568,30 @@ namespace Clock
             btn_tab_alarm.BackColor     = Color.FromArgb(32, 32, 32);
             btn_tab_clock.BackColor     = Color.FromArgb(32, 32, 32);
 
-            button.BackColor            = Color.FromArgb(42, 42, 42); 
+            button.BackColor            = Color.FromArgb(42, 42, 42);
 
-
-            if (button == btn_tab_alarm)
+            if (button == btn_tab_timer)
             {
-               
 
+                tbc_main.SelectedIndex = 0;
+
+            }
+            else if (button == btn_tab_alarm)
+            {
+
+                tbc_main.SelectedIndex = 1;
+
+            }
+            else if (button == btn_tab_stopwatch)
+            {
+
+                tbc_main.SelectedIndex = 2;
+
+            }
+            else if (button == btn_tab_clock)
+            {
+
+                tbc_main.SelectedIndex = 3;
 
             }
         }

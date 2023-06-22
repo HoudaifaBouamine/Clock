@@ -51,16 +51,20 @@ namespace Clock
             this.btn_FlagStopwatch = new System.Windows.Forms.Button();
             this.btn_ResetStopwatch = new System.Windows.Forms.Button();
             this.tb_timer = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
+            this.tp_alarm = new System.Windows.Forms.TabPage();
+            this.tp_clock = new System.Windows.Forms.TabPage();
             this.btn_tab_timer = new System.Windows.Forms.Button();
             this.btn_tab_alarm = new System.Windows.Forms.Button();
             this.btn_tab_stopwatch = new System.Windows.Forms.Button();
             this.btn_tab_clock = new System.Windows.Forms.Button();
-            this.tp_alarm = new System.Windows.Forms.TabPage();
-            this.tp_clock = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tbc_main.SuspendLayout();
             this.tp_Stopwatch.SuspendLayout();
             this.tb_timer.SuspendLayout();
+            this.tp_alarm.SuspendLayout();
+            this.tp_clock.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Stopwatch_time
@@ -124,11 +128,11 @@ namespace Clock
             // 
             // tbc_main
             // 
-            this.tbc_main.Controls.Add(this.tp_Stopwatch);
             this.tbc_main.Controls.Add(this.tb_timer);
             this.tbc_main.Controls.Add(this.tp_alarm);
+            this.tbc_main.Controls.Add(this.tp_Stopwatch);
             this.tbc_main.Controls.Add(this.tp_clock);
-            this.tbc_main.Location = new System.Drawing.Point(264, 1);
+            this.tbc_main.Location = new System.Drawing.Point(257, 1);
             this.tbc_main.Name = "tbc_main";
             this.tbc_main.SelectedIndex = 0;
             this.tbc_main.Size = new System.Drawing.Size(741, 675);
@@ -200,9 +204,9 @@ namespace Clock
             this.lvc_stopwatch_total});
             this.lv_recordes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
             this.lv_recordes.HideSelection = false;
-            this.lv_recordes.Location = new System.Drawing.Point(21, 389);
+            this.lv_recordes.Location = new System.Drawing.Point(27, 389);
             this.lv_recordes.Name = "lv_recordes";
-            this.lv_recordes.Size = new System.Drawing.Size(688, 257);
+            this.lv_recordes.Size = new System.Drawing.Size(670, 257);
             this.lv_recordes.TabIndex = 11;
             this.lv_recordes.UseCompatibleStateImageBehavior = false;
             this.lv_recordes.View = System.Windows.Forms.View.Details;
@@ -273,7 +277,7 @@ namespace Clock
             // tb_timer
             // 
             this.tb_timer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.tb_timer.Controls.Add(this.label3);
+            this.tb_timer.Controls.Add(this.panel1);
             this.tb_timer.Location = new System.Drawing.Point(4, 25);
             this.tb_timer.Name = "tb_timer";
             this.tb_timer.Padding = new System.Windows.Forms.Padding(3);
@@ -281,15 +285,27 @@ namespace Clock
             this.tb_timer.TabIndex = 1;
             this.tb_timer.Text = "Timer";
             // 
-            // label3
+            // tp_alarm
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.8F);
-            this.label3.Location = new System.Drawing.Point(70, 131);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(625, 96);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Comming Soon";
+            this.tp_alarm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.tp_alarm.Controls.Add(this.label2);
+            this.tp_alarm.Location = new System.Drawing.Point(4, 25);
+            this.tp_alarm.Name = "tp_alarm";
+            this.tp_alarm.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_alarm.Size = new System.Drawing.Size(733, 646);
+            this.tp_alarm.TabIndex = 2;
+            this.tp_alarm.Text = "Alarm";
+            // 
+            // tp_clock
+            // 
+            this.tp_clock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.tp_clock.Controls.Add(this.label4);
+            this.tp_clock.Location = new System.Drawing.Point(4, 25);
+            this.tp_clock.Name = "tp_clock";
+            this.tp_clock.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_clock.Size = new System.Drawing.Size(733, 646);
+            this.tp_clock.TabIndex = 3;
+            this.tp_clock.Text = "Clock";
             // 
             // btn_tab_timer
             // 
@@ -347,25 +363,34 @@ namespace Clock
             this.btn_tab_clock.UseVisualStyleBackColor = false;
             this.btn_tab_clock.Click += new System.EventHandler(this.btn_tab_Clicked);
             // 
-            // tp_alarm
+            // label2
             // 
-            this.tp_alarm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.tp_alarm.Location = new System.Drawing.Point(4, 25);
-            this.tp_alarm.Name = "tp_alarm";
-            this.tp_alarm.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_alarm.Size = new System.Drawing.Size(733, 646);
-            this.tp_alarm.TabIndex = 2;
-            this.tp_alarm.Text = "Alarm";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.8F);
+            this.label2.Location = new System.Drawing.Point(54, 275);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(625, 96);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Comming Soon";
             // 
-            // tp_clock
+            // label4
             // 
-            this.tp_clock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.tp_clock.Location = new System.Drawing.Point(4, 25);
-            this.tp_clock.Name = "tp_clock";
-            this.tp_clock.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_clock.Size = new System.Drawing.Size(733, 646);
-            this.tp_clock.TabIndex = 3;
-            this.tp_clock.Text = "Clock";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.8F);
+            this.label4.Location = new System.Drawing.Point(47, 179);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(625, 96);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Comming Soon";
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(727, 640);
+            this.panel1.TabIndex = 0;
             // 
             // main_form
             // 
@@ -389,7 +414,10 @@ namespace Clock
             this.tp_Stopwatch.ResumeLayout(false);
             this.tp_Stopwatch.PerformLayout();
             this.tb_timer.ResumeLayout(false);
-            this.tb_timer.PerformLayout();
+            this.tp_alarm.ResumeLayout(false);
+            this.tp_alarm.PerformLayout();
+            this.tp_clock.ResumeLayout(false);
+            this.tp_clock.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -411,7 +439,6 @@ namespace Clock
         private System.Windows.Forms.ColumnHeader lvc_stopwatch_laps;
         private System.Windows.Forms.ColumnHeader lvc_stopwatch_time;
         private System.Windows.Forms.ColumnHeader lvc_stopwatch_total;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_Fullscreen;
         private System.Windows.Forms.Button btn_Smallwindow;
         private System.Windows.Forms.Label label1;
@@ -421,6 +448,9 @@ namespace Clock
         private System.Windows.Forms.Button btn_tab_clock;
         private System.Windows.Forms.TabPage tp_alarm;
         private System.Windows.Forms.TabPage tp_clock;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
