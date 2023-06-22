@@ -40,7 +40,7 @@ namespace Clock
             lv_recordes.Visible = false;
             btn_FlagStopwatch.Enabled = false;
             btn_ResetStopwatch.Enabled = false;
-
+//            tbc_main.Location = new Point(tbc_main.Location.X, tbc_main.Location.Y - 30);
 
 
             save_ratio_of_size_stopwatch();
@@ -55,7 +55,10 @@ namespace Clock
 
         public void save_ratio_of_size_stopwatch()
         {
-            stopwatch_size_ratio.control.Width = (float)tp_Stopwatch.Width / (float)this.Width;
+            stopwatch_size_ratio.control.Width = (float)tbc_main.Width / (float)this.Width;
+            stopwatch_size_ratio.control_original.Width = (float)tbc_main.Width / (float)this.Width;
+
+
             stopwatch_size_ratio.control.Height = stopwatch_size_ratio.control.Width;//stopwatch_ratio.control.Width (float)tp_Stopwatch.Height            / (float)this.Height          ;
             stopwatch_size_ratio.timer.Width = (float)lbl_Stopwatch_time.Font.Size / (float)tp_Stopwatch.Width;
             stopwatch_size_ratio.timer.Height = stopwatch_size_ratio.timer.Width;//(float)lbl_Stopwatch_time.Font.Size   / (float)tp_Stopwatch.Height  ;
@@ -75,8 +78,11 @@ namespace Clock
         }
         public void apply_ratio_to_size_stopwatch()
         {
-            tp_Stopwatch.Width = (int)(this.Width * stopwatch_size_ratio.control.Width);
-            tp_Stopwatch.Height = (int)(this.Height * stopwatch_size_ratio.control.Width);
+
+
+
+            tbc_main.Width = (int)((float)this.Width * stopwatch_size_ratio.control.Width);
+           // tp_Stopwatch.Height = (int)(this.Height * stopwatch_size_ratio.control.Width);
 
 
             lbl_Stopwatch_time.Font = new Font(lbl_Stopwatch_time.Font.FontFamily, (stopwatch_size_ratio.timer.Width * tp_Stopwatch.Width), lbl_Stopwatch_time.Font.Style);
@@ -119,7 +125,7 @@ namespace Clock
         {
 
 
-            r.tab_control_x = ((float)tp_Stopwatch.Location.X / (float)this.Width);
+            r.tab_control_x =((float)tp_Stopwatch.Location.X / (float)this.Width);
 
             float origin = tp_Stopwatch.Size.Width;
 
@@ -170,8 +176,70 @@ namespace Clock
             lv_recordes.Location = new Point((lv_recordes.Location.X), (int)(r.listview * origin2));
         }
 
+        private void resize_controls_stopwatch()
+        {
+
+            if (this.Width / this.Height > stopwatch_size_ratio.hightest_ratio_between_screen_width_and_heigth)
+            {
+                this.Width = (int)((float)this.Height * stopwatch_size_ratio.hightest_ratio_between_screen_width_and_heigth);
+            }
+
+
+            lv_recordes.Size = new Size(lv_recordes.Size.Width, tp_Stopwatch.Height - lv_recordes.Location.Y);
+            tbc_main.Size = new Size(tbc_main.Size.Width, this.Height - 25);
+            tbc_main.Location = new Point(this.Width - tbc_main.Size.Width - 20, tbc_main.Location.Y);
+
+            bool somthing_change = false;
+
+            if (this.Width < 600 || flags.fill_screen)
+            {
+                //stopwatch_size_ratio.control.Width = 0.99f;
+
+                if (tbc_main.Dock == DockStyle.None)
+                {
+                    tbc_main.Dock = DockStyle.Bottom;
+
+                    somthing_change = true;
+                    //tbc_main.Size = new Size(tbc_main.Size.Width, this.Height - 10);
+
+                }
+            }
+            else //if (tbc_main.Dock == DockStyle.Bottom)
+            {
+                stopwatch_size_ratio.control.Width = stopwatch_size_ratio.control_original.Width;
+                tbc_main.Dock = DockStyle.None;
+                //tbc_main.Location = new Point(tbc_main.Location.X, tbc_main.Location.Y - 25);
+                tbc_main.Size = new Size(tbc_main.Size.Width, this.Height-25);
+
+                if(tbc_main.Dock == DockStyle.Bottom)
+                    somthing_change = true;
+
+            }
+
+
+             tbc_main.Size = new Size(tbc_main.Size.Width, this.Height - 25);
+
+            
+
+            apply_ratio_to_position_stopwatch();
+            apply_ratio_to_size_stopwatch();
+            make_button_circle(btn_StartStopwatch);
+            make_button_circle(btn_FlagStopwatch);
+            make_button_circle(btn_ResetStopwatch);
+
+            tbc_main.Location = new Point(tbc_main.Location.X, -25);
+
+
+            //
+
+
+
+            btn_tab_stopwatch.Width = this.Width - tbc_main.Width;
+        }
         class clsRatio
         {
+            public SizeF control_original;
+
             public SizeF control;
             public SizeF timer;
             public SizeF csec_timer;
@@ -181,7 +249,7 @@ namespace Clock
             public float listview;
             public float listview_y;
 
-            public float hightest_ratio_between_screen_width_and_heigth = 794.0f/ 470.0f;// width/hight
+            public float hightest_ratio_between_screen_width_and_heigth = 870.0f/ 455.0f;// width/hight
         }
         class clsPositionRatio{
 
@@ -412,7 +480,7 @@ namespace Clock
 
         private void btn_Fullscreen_Click(object sender, EventArgs e)
         {
-            
+
 
             if (flags.mid_screen)
             {
@@ -460,26 +528,13 @@ namespace Clock
             {
                 MessageBox.Show("Error , Imposible behaviour\nentring fill screen mode from smallscreen mode");
             }
-        }
 
-        private void resize_controls_stopwatch()
-        {
-
-            if (this.Width / this.Height > stopwatch_size_ratio.hightest_ratio_between_screen_width_and_heigth)
-            {
-                this.Width = (int)((float)this.Height * stopwatch_size_ratio.hightest_ratio_between_screen_width_and_heigth);
-            }
-
-            apply_ratio_to_position_stopwatch();
-            apply_ratio_to_size_stopwatch();
-            make_button_circle(btn_StartStopwatch);
-            make_button_circle(btn_FlagStopwatch);
-            make_button_circle(btn_ResetStopwatch);
-
-            lv_recordes.Size = new Size(lv_recordes.Size.Width, tp_Stopwatch.Height - lv_recordes.Location.Y - 10);
-            tbc_main.Size = new Size(tbc_main.Size.Width, this.Height - 20);
+            resize_controls_stopwatch();
+            resize_controls_stopwatch();
 
         }
+
+
         private void main_form_Resize(object sender, EventArgs e)
         {
             resize_controls_stopwatch();
@@ -489,6 +544,27 @@ namespace Clock
         private void lv_recordes_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_tab_Clicked(object sender, EventArgs e)
+        {
+
+            Button button = (Button)sender;
+
+            btn_tab_stopwatch.BackColor = Color.FromArgb(32, 32, 32);
+            btn_tab_timer.BackColor     = Color.FromArgb(32, 32, 32);
+            btn_tab_alarm.BackColor     = Color.FromArgb(32, 32, 32);
+            btn_tab_clock.BackColor     = Color.FromArgb(32, 32, 32);
+
+            button.BackColor            = Color.FromArgb(42, 42, 42); 
+
+
+            if (button == btn_tab_alarm)
+            {
+               
+
+
+            }
         }
     }
 }

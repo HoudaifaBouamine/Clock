@@ -9,3 +9,14 @@ C:\Users\admin\Desktop\Clock\obj\Debug\Clock.csproj.GenerateResource.cache
 C:\Users\admin\Desktop\Clock\obj\Debug\Clock.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\Clock\obj\Debug\Clock.exe
 C:\Users\admin\Desktop\Clock\obj\Debug\Clock.pdb
+C:\Users\admin\Desktop\git\Clock\bin\Debug\Clock.exe.config
+C:\Users\admin\Desktop\git\Clock\bin\Debug\Clock.exe
+C:\Users\admin\Desktop\git\Clock\bin\Debug\Clock.pdb
+C:\Users\admin\Desktop\git\Clock\obj\Debug\Clock.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\git\Clock\obj\Debug\Clock.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\Desktop\git\Clock\obj\Debug\Clock.main_form.resources
+C:\Users\admin\Desktop\git\Clock\obj\Debug\Clock.Properties.Resources.resources
+C:\Users\admin\Desktop\git\Clock\obj\Debug\Clock.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\git\Clock\obj\Debug\Clock.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\git\Clock\obj\Debug\Clock.exe
+C:\Users\admin\Desktop\git\Clock\obj\Debug\Clock.pdb
