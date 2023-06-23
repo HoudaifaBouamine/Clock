@@ -53,7 +53,6 @@ namespace Clock
             this.tp_alarm = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.tp_Stopwatch = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_Smallwindow = new System.Windows.Forms.Button();
             this.btn_Fullscreen = new System.Windows.Forms.Button();
             this.lv_recordes = new System.Windows.Forms.ListView();
@@ -71,6 +70,7 @@ namespace Clock
             this.btn_tab_clock = new System.Windows.Forms.Button();
             this.timer_timer_down = new System.Windows.Forms.Timer(this.components);
             this.notification = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btn_Close = new System.Windows.Forms.Button();
             this.tbc_main.SuspendLayout();
             this.tb_timer.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -84,7 +84,7 @@ namespace Clock
             // 
             this.lbl_Stopwatch_time.AutoSize = true;
             this.lbl_Stopwatch_time.Font = new System.Drawing.Font("Segoe UI", 79.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stopwatch_time.Location = new System.Drawing.Point(16, 65);
+            this.lbl_Stopwatch_time.Location = new System.Drawing.Point(46, 69);
             this.lbl_Stopwatch_time.Name = "lbl_Stopwatch_time";
             this.lbl_Stopwatch_time.Size = new System.Drawing.Size(593, 175);
             this.lbl_Stopwatch_time.TabIndex = 2;
@@ -94,7 +94,7 @@ namespace Clock
             // 
             this.lbl_stopwatch_hours_title.AutoSize = true;
             this.lbl_stopwatch_hours_title.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_stopwatch_hours_title.Location = new System.Drawing.Point(101, 223);
+            this.lbl_stopwatch_hours_title.Location = new System.Drawing.Point(131, 227);
             this.lbl_stopwatch_hours_title.Name = "lbl_stopwatch_hours_title";
             this.lbl_stopwatch_hours_title.Size = new System.Drawing.Size(36, 31);
             this.lbl_stopwatch_hours_title.TabIndex = 4;
@@ -104,7 +104,7 @@ namespace Clock
             // 
             this.lbl_stopwatch_mins_title.AutoSize = true;
             this.lbl_stopwatch_mins_title.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_stopwatch_mins_title.Location = new System.Drawing.Point(267, 223);
+            this.lbl_stopwatch_mins_title.Location = new System.Drawing.Point(297, 227);
             this.lbl_stopwatch_mins_title.Name = "lbl_stopwatch_mins_title";
             this.lbl_stopwatch_mins_title.Size = new System.Drawing.Size(53, 31);
             this.lbl_stopwatch_mins_title.TabIndex = 5;
@@ -115,7 +115,7 @@ namespace Clock
             // 
             this.lbl_stopwatch_secs_title.AutoSize = true;
             this.lbl_stopwatch_secs_title.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_stopwatch_secs_title.Location = new System.Drawing.Point(443, 223);
+            this.lbl_stopwatch_secs_title.Location = new System.Drawing.Point(473, 227);
             this.lbl_stopwatch_secs_title.Name = "lbl_stopwatch_secs_title";
             this.lbl_stopwatch_secs_title.Size = new System.Drawing.Size(47, 31);
             this.lbl_stopwatch_secs_title.TabIndex = 6;
@@ -127,7 +127,7 @@ namespace Clock
             this.lbl_csecond.AutoSize = true;
             this.lbl_csecond.BackColor = System.Drawing.Color.Transparent;
             this.lbl_csecond.Font = new System.Drawing.Font("Segoe UI", 60F);
-            this.lbl_csecond.Location = new System.Drawing.Point(565, 107);
+            this.lbl_csecond.Location = new System.Drawing.Point(595, 111);
             this.lbl_csecond.Name = "lbl_csecond";
             this.lbl_csecond.Size = new System.Drawing.Size(165, 133);
             this.lbl_csecond.TabIndex = 7;
@@ -359,7 +359,7 @@ namespace Clock
             // tp_Stopwatch
             // 
             this.tp_Stopwatch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.tp_Stopwatch.Controls.Add(this.label1);
+            this.tp_Stopwatch.Controls.Add(this.btn_Close);
             this.tp_Stopwatch.Controls.Add(this.btn_Smallwindow);
             this.tp_Stopwatch.Controls.Add(this.btn_Fullscreen);
             this.tp_Stopwatch.Controls.Add(this.lv_recordes);
@@ -379,13 +379,6 @@ namespace Clock
             this.tp_Stopwatch.Text = "Stopwatch";
             this.tp_Stopwatch.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 0;
-            // 
             // btn_Smallwindow
             // 
             this.btn_Smallwindow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
@@ -393,7 +386,7 @@ namespace Clock
             this.btn_Smallwindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Smallwindow.FlatAppearance.BorderSize = 0;
             this.btn_Smallwindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Smallwindow.Location = new System.Drawing.Point(653, 65);
+            this.btn_Smallwindow.Location = new System.Drawing.Point(683, 69);
             this.btn_Smallwindow.Name = "btn_Smallwindow";
             this.btn_Smallwindow.Size = new System.Drawing.Size(29, 30);
             this.btn_Smallwindow.TabIndex = 13;
@@ -407,7 +400,7 @@ namespace Clock
             this.btn_Fullscreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Fullscreen.FlatAppearance.BorderSize = 0;
             this.btn_Fullscreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Fullscreen.Location = new System.Drawing.Point(619, 65);
+            this.btn_Fullscreen.Location = new System.Drawing.Point(649, 69);
             this.btn_Fullscreen.Name = "btn_Fullscreen";
             this.btn_Fullscreen.Size = new System.Drawing.Size(29, 30);
             this.btn_Fullscreen.TabIndex = 12;
@@ -425,7 +418,7 @@ namespace Clock
             this.lvc_stopwatch_total});
             this.lv_recordes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
             this.lv_recordes.HideSelection = false;
-            this.lv_recordes.Location = new System.Drawing.Point(27, 417);
+            this.lv_recordes.Location = new System.Drawing.Point(57, 421);
             this.lv_recordes.Name = "lv_recordes";
             this.lv_recordes.Size = new System.Drawing.Size(669, 239);
             this.lv_recordes.TabIndex = 11;
@@ -454,7 +447,7 @@ namespace Clock
             this.btn_StartStopwatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_StartStopwatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_StartStopwatch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.btn_StartStopwatch.Location = new System.Drawing.Point(241, 295);
+            this.btn_StartStopwatch.Location = new System.Drawing.Point(271, 299);
             this.btn_StartStopwatch.Name = "btn_StartStopwatch";
             this.btn_StartStopwatch.Size = new System.Drawing.Size(75, 73);
             this.btn_StartStopwatch.TabIndex = 8;
@@ -471,7 +464,7 @@ namespace Clock
             this.btn_FlagStopwatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_FlagStopwatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_FlagStopwatch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.btn_FlagStopwatch.Location = new System.Drawing.Point(323, 295);
+            this.btn_FlagStopwatch.Location = new System.Drawing.Point(353, 299);
             this.btn_FlagStopwatch.Name = "btn_FlagStopwatch";
             this.btn_FlagStopwatch.Size = new System.Drawing.Size(75, 73);
             this.btn_FlagStopwatch.TabIndex = 9;
@@ -487,7 +480,7 @@ namespace Clock
             this.btn_ResetStopwatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ResetStopwatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ResetStopwatch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.btn_ResetStopwatch.Location = new System.Drawing.Point(403, 295);
+            this.btn_ResetStopwatch.Location = new System.Drawing.Point(433, 299);
             this.btn_ResetStopwatch.Name = "btn_ResetStopwatch";
             this.btn_ResetStopwatch.Size = new System.Drawing.Size(75, 73);
             this.btn_ResetStopwatch.TabIndex = 10;
@@ -502,7 +495,7 @@ namespace Clock
             this.tp_clock.Location = new System.Drawing.Point(4, 25);
             this.tp_clock.Name = "tp_clock";
             this.tp_clock.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_clock.Size = new System.Drawing.Size(793, 633);
+            this.tp_clock.Size = new System.Drawing.Size(793, 635);
             this.tp_clock.TabIndex = 3;
             this.tp_clock.Text = "Clock";
             // 
@@ -594,6 +587,23 @@ namespace Clock
             this.notification.Text = "notifyIcon1";
             this.notification.Visible = true;
             // 
+            // btn_Close
+            // 
+            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btn_Close.FlatAppearance.BorderSize = 0;
+            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.btn_Close.Location = new System.Drawing.Point(738, 0);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(55, 36);
+            this.btn_Close.TabIndex = 14;
+            this.btn_Close.Text = "X";
+            this.btn_Close.UseVisualStyleBackColor = false;
+            this.btn_Close.Visible = false;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            // 
             // main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -607,6 +617,7 @@ namespace Clock
             this.Controls.Add(this.btn_tab_alarm);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(350, 183);
             this.Name = "main_form";
@@ -647,7 +658,6 @@ namespace Clock
         private System.Windows.Forms.ColumnHeader lvc_stopwatch_total;
         private System.Windows.Forms.Button btn_Fullscreen;
         private System.Windows.Forms.Button btn_Smallwindow;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_tab_timer;
         private System.Windows.Forms.Button btn_tab_alarm;
         private System.Windows.Forms.Button btn_tab_stopwatch;
@@ -667,6 +677,7 @@ namespace Clock
         private System.Windows.Forms.Button btn_timer_reset_timer;
         private System.Windows.Forms.Timer timer_timer_down;
         private System.Windows.Forms.NotifyIcon notification;
+        private System.Windows.Forms.Button btn_Close;
     }
 }
 

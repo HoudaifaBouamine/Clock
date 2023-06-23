@@ -25,7 +25,7 @@ namespace Clock
 
         clsRatio stopwatch_size_ratio;
         clsPositionRatio r;
-        clsFlags flags;
+        clsFlags stopwatchflags;
         long start_tick;
         long pause_tick;
         long last_recored_tick;
@@ -36,7 +36,7 @@ namespace Clock
             make_button_circle(btn_ResetStopwatch);
 
             stopwatch_size_ratio = new clsRatio();
-            flags = new clsFlags();
+            stopwatchflags = new clsFlags();
             r = new clsPositionRatio();
             lv_recordes.Visible = false;
             btn_FlagStopwatch.Enabled = false;
@@ -194,7 +194,7 @@ namespace Clock
 
             bool somthing_change = false;
 
-            if (this.Width < 600 || flags.fill_screen)
+            if (this.Width < 600 || stopwatchflags.fill_screen)
             {
                 //stopwatch_size_ratio.control.Width = 0.99f;
 
@@ -234,6 +234,7 @@ namespace Clock
 
 
             //
+
 
 
         }
@@ -292,18 +293,18 @@ namespace Clock
         {
             if (btn_StartStopwatch.Tag.ToString() == "0") {
 
-                flags.running  = true;
-                flags.pause = false ;
+                stopwatchflags.running  = true;
+                stopwatchflags.pause = false ;
                 btn_FlagStopwatch.Enabled = true;
                 btn_ResetStopwatch.Enabled = true;
 
 
                 btn_StartStopwatch.BackgroundImage = Resources.stopwatch_pause;
 
-                if (!flags.started)
+                if (!stopwatchflags.started)
                 {
                     start_tick = DateTime.Now.Ticks;
-                    flags.started = true;
+                    stopwatchflags.started = true;
                 }
                 else 
                 {
@@ -315,8 +316,8 @@ namespace Clock
             }
             else
             {
-                flags.running = false;
-                flags.pause = true;
+                stopwatchflags.running = false;
+                stopwatchflags.pause = true;
                 btn_FlagStopwatch.Enabled = false;
 
 
@@ -356,7 +357,7 @@ namespace Clock
 
         private void btn_ResetStopwatch_Click(object sender, EventArgs e)
         {
-            flags.started = false;
+            stopwatchflags.started = false;
             btn_StartStopwatch.BackgroundImage = Resources.stopwatch_start;
             btn_StartStopwatch.Tag = "0";
             timer_fram.Stop();
@@ -366,7 +367,7 @@ namespace Clock
 
             lv_recordes.Items.Clear();
             lv_recordes.Visible = false;
-            flags.no_records = true;
+            stopwatchflags.no_records = true;
             btn_FlagStopwatch.Enabled = false;
 
         }
@@ -393,7 +394,7 @@ namespace Clock
         {
 
 
-            if (flags.no_records)
+            if (stopwatchflags.no_records)
             {
                 lv_recordes.Visible          = true;
                 lv_recordes.Columns[0].Width = (int)((float)tbc_main.Width * 0.25f);
@@ -465,7 +466,7 @@ namespace Clock
         {
 
 
-            if (flags.mid_screen)
+            if (stopwatchflags.mid_screen)
             {
 
                 tp_Stopwatch.BackColor = Color.FromArgb(32, 32, 32);
@@ -481,10 +482,10 @@ namespace Clock
 
 
 
-                flags.mid_screen = false;
-                flags.fill_screen = true;
+                stopwatchflags.mid_screen = false;
+                stopwatchflags.fill_screen = true;
             }
-            else if(flags.fill_screen)
+            else if(stopwatchflags.fill_screen)
             {
 
 
@@ -506,8 +507,8 @@ namespace Clock
 
 
 
-                flags.fill_screen = false;
-                flags.mid_screen = true;
+                stopwatchflags.fill_screen = false;
+                stopwatchflags.mid_screen = true;
             }
             else
             {
@@ -794,9 +795,76 @@ namespace Clock
 
         }
 
+        Size lastSize = new Size(0,0);
+
         private void btn_Smallwindow_Click(object sender, EventArgs e)
         {
-            
+
+            if(stopwatchflags.mid_screen)
+            {
+
+                tbc_main.Dock = DockStyle.Bottom;
+                this.FormBorderStyle = FormBorderStyle.None;
+
+                lastSize = this.Size;
+
+                this.Size = new Size(300, 300);
+                tbc_main.Size = this.Size + new Size(0,20);
+
+                btn_FlagStopwatch.Visible = false;
+                btn_Fullscreen.Visible    = false;
+
+                btn_StartStopwatch.Size = new Size(50, 50);
+                btn_ResetStopwatch.Size = new Size(50, 50);
+                btn_Smallwindow   .Size = new Size(40, 40);
+
+                btn_Smallwindow.Location = new Point(10, 10);
+
+                make_button_circle(btn_StartStopwatch);
+                make_button_circle(btn_ResetStopwatch);
+
+                btn_StartStopwatch.Location = new Point(btn_StartStopwatch.Location.X , btn_StartStopwatch.Location.Y + 50);
+                btn_ResetStopwatch.Location = new Point(btn_ResetStopwatch.Location.X, btn_ResetStopwatch.Location.Y + 50);
+
+                lbl_stopwatch_hours_title.Font = new Font(lbl_stopwatch_hours_title.Font.FontFamily, 10);
+                lbl_stopwatch_mins_title.Font  = new Font(lbl_stopwatch_hours_title.Font.FontFamily, 10);
+                lbl_stopwatch_secs_title.Font  = new Font(lbl_stopwatch_hours_title.Font.FontFamily, 10);
+
+
+                lbl_stopwatch_hours_title.Location = new Point(lbl_stopwatch_hours_title.Location .X - 10 , lbl_stopwatch_hours_title.Location.Y + 20);
+                lbl_stopwatch_mins_title .Location = new Point (lbl_stopwatch_mins_title .Location.X - 10 , lbl_stopwatch_mins_title .Location.Y + 20);    
+                lbl_stopwatch_secs_title .Location = new Point (lbl_stopwatch_secs_title .Location.X - 10 , lbl_stopwatch_secs_title .Location.Y + 20);
+
+
+                lbl_Stopwatch_time.Location = new Point(lbl_Stopwatch_time.Location.X, lbl_Stopwatch_time.Location.Y + 20);
+                lbl_csecond.Location        = new Point(lbl_csecond.Location       .X, lbl_csecond.Location       .Y + 20);
+
+                btn_Close.Visible = true;
+
+                stopwatchflags.mid_screen = false;
+                stopwatchflags.small_screen = true;
+            }
+            else if (stopwatchflags.small_screen)
+            {
+
+                tbc_main.Dock = DockStyle.None;
+                this.FormBorderStyle = FormBorderStyle.Sizable;
+
+                this.Size = lastSize;
+
+
+                btn_FlagStopwatch.Visible = true;
+                btn_Fullscreen.Visible    = true;
+                btn_Close.Visible         = false;
+
+                stopwatchflags.mid_screen = true;
+                stopwatchflags.small_screen = false;
+            }
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
