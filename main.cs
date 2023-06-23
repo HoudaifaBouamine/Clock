@@ -1,4 +1,5 @@
-﻿using Clock.Properties;
+﻿using CircularProgressBar;
+using Clock.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,7 +49,9 @@ namespace Clock
 
             resize_controls_stopwatch();
 
+            load_timer();
 
+            circularProgressBar.Value = 0;
         }
 
 
@@ -283,25 +286,7 @@ namespace Clock
                 circular_button_y = new float[3];
             }
         }
-        class clsFlags
-        {
-            public bool started;
-            public bool running;
-            public bool pause ;
-            public bool no_records;
-            public bool mid_screen;
-            public bool fill_screen;
-            public bool small_screen;
-
-            public clsFlags()
-            {
-                this.started = false;
-                this.no_records = true;
-                this.fill_screen = false;
-                this.mid_screen = true;
-                this.small_screen = false;
-            }
-        }
+        
 
         private void btn_StartStopwatch_Click(object sender, EventArgs e)
         {
@@ -410,8 +395,8 @@ namespace Clock
 
             if (flags.no_records)
             {
-                lv_recordes.Visible = true;
-                lv_recordes.Columns[0].Width = (int) ((float)tbc_main.Width * 0.25f);
+                lv_recordes.Visible          = true;
+                lv_recordes.Columns[0].Width = (int)((float)tbc_main.Width * 0.25f);
                 lv_recordes.Columns[1].Width = (int)((float)tbc_main.Width * 0.32f);
                 lv_recordes.Columns[2].Width = (int)((float)tbc_main.Width * 0.32f);
             }
@@ -558,6 +543,40 @@ namespace Clock
 
         }
 
+
+        // 
+
+        class clsFlags
+        {
+            public bool started;
+            public bool running;
+            public bool pause;
+            public bool no_records;
+            public bool mid_screen;
+            public bool fill_screen;
+            public bool small_screen;
+
+            public clsFlags()
+            {
+                this.started = false;
+                this.running = false;
+                this.pause = false;
+                this.no_records = true;
+                this.fill_screen = false;
+                this.mid_screen = true;
+                this.small_screen = false;
+                
+
+            }
+        }
+
+        clsFlags timerflags = new clsFlags();
+
+        private  void load_timer()
+        {
+            lbl_timer.Text = get_time(100*Convert.ToInt64(circularProgressBar.Tag.ToString())).Substring(0, 8);
+        }
+
         private void btn_tab_Clicked(object sender, EventArgs e)
         {
 
@@ -568,7 +587,7 @@ namespace Clock
             btn_tab_alarm.BackColor     = Color.FromArgb(32, 32, 32);
             btn_tab_clock.BackColor     = Color.FromArgb(32, 32, 32);
 
-            button.BackColor            = Color.FromArgb(42, 42, 42);
+            button.BackColor            = Color.FromArgb(50, 50, 50);
 
             if (button == btn_tab_timer)
             {
@@ -594,6 +613,190 @@ namespace Clock
                 tbc_main.SelectedIndex = 3;
 
             }
+        }
+
+        private void p_Timer1_MouseEnter(object sender, EventArgs e)
+        {
+            circularProgressBar.InnerColor  =            Color.FromArgb(36, 36, 36);
+            p_Timer1.BackColor              =            Color.FromArgb(36, 36, 36);
+
+
+
+            Color.FromArgb(36, 36, 36);
+        }
+
+        private void p_Timer1_MouseLeave(object sender, EventArgs e)
+        {
+           Color.FromArgb(39, 39, 39);
+
+           circularProgressBar.InnerColor   = Color.FromArgb(39, 39, 39);
+            p_Timer1.BackColor              = Color.FromArgb(39, 39, 39);
+
+        }
+
+        private void p_Timer1_MouseClick(object sender, MouseEventArgs e)
+        {
+            //show_timer_settings(p_Timer1);
+            
+        }
+
+        private void show_timer_settings(Panel panel)
+        {
+            if(!timerflags.running)
+                 MessageBox.Show("hello");
+
+        }
+
+
+
+        long timer_seconds;
+        private void btn_timer_start_timer_Click(object sender, EventArgs e)
+        {
+
+            if (!timerflags.running)
+            {
+                if (!timerflags.started)
+                {
+                    timer_seconds = Convert.ToInt64(circularProgressBar.Tag.ToString());
+                    circularProgressBar.Maximum = (int)timer_seconds;
+                    circularProgressBar.Step = 1;
+
+                    circularProgressBar.Value = circularProgressBar.Maximum - circularProgressBar.Step;
+
+                    lbl_timer.Text = get_time(--timer_seconds * 100).Substring(0, 8);
+                    timerflags.started = true;
+                }
+
+                timer_timer_down.Start();
+                btn_timer_start_timer.BackgroundImage = Resources.stopwatch_pause;
+
+                timerflags.running = true;
+                timerflags.pause = false;
+
+            }
+            else
+            {
+                btn_timer_start_timer.BackgroundImage = Resources.stopwatch_start;
+                timer_timer_down.Stop();
+                timerflags.running = false;
+                timerflags.pause = true;
+
+            }
+        }
+
+        private void timer_timer_down_Tick(object sender, EventArgs e)
+        {
+          
+            if(circularProgressBar.Value - circularProgressBar.Step >=  0)
+                circularProgressBar.Value -= circularProgressBar.Step ;
+
+            timer_seconds--;
+            lbl_timer.Text = get_time(timer_seconds * 100).Substring(0, 8);
+
+            if (timer_seconds <= 0)
+            {
+                notification.Icon = SystemIcons.Application;
+                
+                notification.BalloonTipIcon = ToolTipIcon.Info;
+                notification.BalloonTipTitle = "Timer [" + lbl_timer_title.Text + "] Done";
+                notification.BalloonTipText = DateTime.Now.TimeOfDay.ToString().Substring(0,5); //DateTime.Now.ToString("hh:mm");
+                notification.ShowBalloonTip(10000);
+                timer_timer_down.Stop();
+            }
+        }
+
+
+
+  
+
+        private void p_Timer1_Click(object sender, EventArgs e)
+        {
+            show_timer_settings_window();
+        }
+
+        private void show_timer_settings_window()
+        {
+            if (!timerflags.running)
+            {
+
+
+                frm_TimerSettings frm = new frm_TimerSettings();
+                frm.timer = new frm_TimerSettings.clsTimerInfo();
+                frm.timer.set_time(Convert.ToInt32(circularProgressBar.Tag.ToString()));
+                frm.timer.set_name(lbl_timer_title.Text);
+                frm.ShowDialog();
+                circularProgressBar.Tag = frm.timer.get_time().ToString();
+                lbl_timer_title.Text = frm.timer.get_name();
+                lbl_timer.Text = get_time(frm.timer.get_time() * 100).Substring(0, 8);
+
+            }
+        }
+
+        private void circularProgressBar_Click(object sender, EventArgs e)
+        {
+            show_timer_settings_window();
+
+        }
+
+        private void lbl_timer_Click(object sender, EventArgs e)
+        {
+            show_timer_settings_window();
+
+        }
+
+       
+
+        private void btn_timer_reset_timer_Click(object sender, EventArgs e)
+        {
+            if (timerflags.started)
+            {
+                timerflags.running = false;
+                timerflags.pause = false;
+                timerflags.started = false;
+                timer_timer_down.Stop();
+
+                btn_timer_start_timer.BackgroundImage = Resources.stopwatch_start;
+
+                circularProgressBar.Value = 0;
+                lbl_timer.Text = get_time(Convert.ToInt64(circularProgressBar.Tag.ToString()) * 100).Substring(0, 8);
+            }
+        }
+
+        private void btn_timer_FullScreen_Click(object sender, EventArgs e)
+        {
+            if (timerflags.mid_screen)
+            {
+                btn_timer_FullScreen.BackgroundImage = Resources.img_CancelFullScreen;
+
+                p_Timer1.Dock = DockStyle.Fill;
+                tbc_main.Dock = DockStyle.Fill;
+
+                timerflags.mid_screen = false;
+                timerflags.fill_screen = true;
+            }
+            else if (timerflags.fill_screen)
+            {
+
+                btn_timer_FullScreen.BackgroundImage = Resources.img_FullScreen1;
+
+                p_Timer1.Dock = DockStyle.None;
+                tbc_main.Dock = DockStyle.None;
+
+
+                timerflags.fill_screen = false;
+                timerflags.mid_screen = true;
+
+            }
+        }
+
+        private void p_Timer1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_Smallwindow_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

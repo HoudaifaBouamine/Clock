@@ -73,6 +73,16 @@ namespace Clock.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap img_Delete {
+            get {
+                object obj = ResourceManager.GetObject("img_Delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_fullscreen {
             get {
                 object obj = ResourceManager.GetObject("img_fullscreen", resourceCulture);
