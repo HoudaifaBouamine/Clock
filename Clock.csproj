@@ -52,6 +52,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsAlarm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="clsAlarm.Designer.cs">
+      <DependentUpon>clsAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AlarmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AlarmSettings.Designer.cs">
+      <DependentUpon>frm_AlarmSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_TimerSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +78,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="clsAlarm.resx">
+      <DependentUpon>clsAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AlarmSettings.resx">
+      <DependentUpon>frm_AlarmSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_TimerSettings.resx">
       <DependentUpon>frm_TimerSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +140,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\img_Delete.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_pen_on_paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_alarm_sound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_alarm_sound2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_alarm_ring.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

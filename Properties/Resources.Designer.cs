@@ -63,6 +63,36 @@ namespace Clock.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap img_alarm_ring {
+            get {
+                object obj = ResourceManager.GetObject("img_alarm_ring", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_alarm_sound {
+            get {
+                object obj = ResourceManager.GetObject("img_alarm_sound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_alarm_sound2 {
+            get {
+                object obj = ResourceManager.GetObject("img_alarm_sound2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_CancelFullScreen {
             get {
                 object obj = ResourceManager.GetObject("img_CancelFullScreen", resourceCulture);
@@ -96,6 +126,16 @@ namespace Clock.Properties {
         internal static System.Drawing.Bitmap img_FullScreen1 {
             get {
                 object obj = ResourceManager.GetObject("img_FullScreen1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_pen_on_paper {
+            get {
+                object obj = ResourceManager.GetObject("img_pen_on_paper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

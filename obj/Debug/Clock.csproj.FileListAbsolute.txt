@@ -25,3 +25,5 @@ C:\Users\admin\Desktop\git\Clock\bin\Debug\WinFormAnimation.dll
 C:\Users\admin\Desktop\git\Clock\bin\Debug\CircularProgressBar.xml
 C:\Users\admin\Desktop\git\Clock\obj\Debug\Clock.csproj.CopyComplete
 C:\Users\admin\Desktop\git\Clock\obj\Debug\Clock.frm_TimerSettings.resources
+C:\Users\admin\Desktop\git\Clock\obj\Debug\Clock.MyAlarm.resources
+C:\Users\admin\Desktop\git\Clock\obj\Debug\Clock.frm_AlarmSettings.resources

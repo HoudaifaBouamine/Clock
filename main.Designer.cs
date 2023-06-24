@@ -51,8 +51,9 @@ namespace Clock
             this.lbl_timer_title = new System.Windows.Forms.Label();
             this.circularProgressBar = new CircularProgressBar.CircularProgressBar();
             this.tp_alarm = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
+            this.alarm1 = new Clock.MyAlarm();
             this.tp_Stopwatch = new System.Windows.Forms.TabPage();
+            this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Smallwindow = new System.Windows.Forms.Button();
             this.btn_Fullscreen = new System.Windows.Forms.Button();
             this.lv_recordes = new System.Windows.Forms.ListView();
@@ -70,7 +71,6 @@ namespace Clock
             this.btn_tab_clock = new System.Windows.Forms.Button();
             this.timer_timer_down = new System.Windows.Forms.Timer(this.components);
             this.notification = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btn_Close = new System.Windows.Forms.Button();
             this.tbc_main.SuspendLayout();
             this.tb_timer.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -337,8 +337,8 @@ namespace Clock
             // 
             // tp_alarm
             // 
-            this.tp_alarm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.tp_alarm.Controls.Add(this.label2);
+            this.tp_alarm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.tp_alarm.Controls.Add(this.alarm1);
             this.tp_alarm.Location = new System.Drawing.Point(4, 25);
             this.tp_alarm.Name = "tp_alarm";
             this.tp_alarm.Padding = new System.Windows.Forms.Padding(3);
@@ -346,15 +346,18 @@ namespace Clock
             this.tp_alarm.TabIndex = 2;
             this.tp_alarm.Text = "Alarm";
             // 
-            // label2
+            // alarm1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.8F);
-            this.label2.Location = new System.Drawing.Point(53, 275);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(625, 96);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Comming Soon";
+            this.alarm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.alarm1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alarm1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.alarm1.Location = new System.Drawing.Point(59, 25);
+            this.alarm1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.alarm1.Name = "alarm1";
+            this.alarm1.Size = new System.Drawing.Size(661, 243);
+            this.alarm1.TabIndex = 0;
+            this.alarm1.Load += new System.EventHandler(this.alarm1_Load);
+            this.alarm1.Click += new System.EventHandler(this.alarm1_Click);
             // 
             // tp_Stopwatch
             // 
@@ -378,6 +381,23 @@ namespace Clock
             this.tp_Stopwatch.TabIndex = 0;
             this.tp_Stopwatch.Text = "Stopwatch";
             this.tp_Stopwatch.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // btn_Close
+            // 
+            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btn_Close.FlatAppearance.BorderSize = 0;
+            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.btn_Close.Location = new System.Drawing.Point(738, 0);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(55, 36);
+            this.btn_Close.TabIndex = 14;
+            this.btn_Close.Text = "X";
+            this.btn_Close.UseVisualStyleBackColor = false;
+            this.btn_Close.Visible = false;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // btn_Smallwindow
             // 
@@ -587,23 +607,6 @@ namespace Clock
             this.notification.Text = "notifyIcon1";
             this.notification.Visible = true;
             // 
-            // btn_Close
-            // 
-            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btn_Close.FlatAppearance.BorderSize = 0;
-            this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.btn_Close.Location = new System.Drawing.Point(738, 0);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(55, 36);
-            this.btn_Close.TabIndex = 14;
-            this.btn_Close.Text = "X";
-            this.btn_Close.UseVisualStyleBackColor = false;
-            this.btn_Close.Visible = false;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
-            // 
             // main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -630,7 +633,6 @@ namespace Clock
             this.p_Timer1.ResumeLayout(false);
             this.p_Timer1.PerformLayout();
             this.tp_alarm.ResumeLayout(false);
-            this.tp_alarm.PerformLayout();
             this.tp_Stopwatch.ResumeLayout(false);
             this.tp_Stopwatch.PerformLayout();
             this.tp_clock.ResumeLayout(false);
@@ -662,9 +664,7 @@ namespace Clock
         private System.Windows.Forms.Button btn_tab_alarm;
         private System.Windows.Forms.Button btn_tab_stopwatch;
         private System.Windows.Forms.Button btn_tab_clock;
-        private System.Windows.Forms.TabPage tp_alarm;
         private System.Windows.Forms.TabPage tp_clock;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel p_Timer1;
@@ -678,6 +678,8 @@ namespace Clock
         private System.Windows.Forms.Timer timer_timer_down;
         private System.Windows.Forms.NotifyIcon notification;
         private System.Windows.Forms.Button btn_Close;
+        private System.Windows.Forms.TabPage tp_alarm;
+        private MyAlarm alarm1;
     }
 }
 

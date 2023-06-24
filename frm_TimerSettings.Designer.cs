@@ -117,7 +117,7 @@
             this.lbl_Mins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.lbl_Mins.Font = new System.Drawing.Font("Segoe UI Semibold", 33F, System.Drawing.FontStyle.Bold);
             this.lbl_Mins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.lbl_Mins.Location = new System.Drawing.Point(135, 9);
+            this.lbl_Mins.Location = new System.Drawing.Point(131, 9);
             this.lbl_Mins.Name = "lbl_Mins";
             this.lbl_Mins.Size = new System.Drawing.Size(99, 80);
             this.lbl_Mins.TabIndex = 1;

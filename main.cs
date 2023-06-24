@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Clock
 {
@@ -52,6 +53,8 @@ namespace Clock
             load_timer();
 
             circularProgressBar.Value = 0;
+
+
         }
 
 
@@ -115,7 +118,7 @@ namespace Clock
             lv_recordes.Columns[1].Width = (int)((float)tbc_main.Width * 0.32f);
             lv_recordes.Columns[2].Width = (int)((float)tbc_main.Width * 0.32f);
         }
-        private void make_button_circle(Button button)
+        static public void make_button_circle(Button button)
         {
             GraphicsPath ButtonPath = new GraphicsPath();
             int def = 3;
@@ -580,7 +583,6 @@ namespace Clock
 
         private void btn_tab_Clicked(object sender, EventArgs e)
         {
-
             Button button = (Button)sender;
 
             btn_tab_stopwatch.BackColor = Color.FromArgb(32, 32, 32);
@@ -866,5 +868,19 @@ namespace Clock
         {
             this.Close();
         }
+
+        private void alarm1_Click(object sender, EventArgs e)
+        {
+            frm_AlarmSettings frm = new frm_AlarmSettings();
+            frm.ShowDialog();
+        }
+
+        private void alarm1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        
     }
 }

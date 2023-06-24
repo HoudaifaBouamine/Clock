@@ -117,44 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="img_Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img_Delete.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_alarm_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img_alarm_sound.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_alarm_sound2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img_alarm_sound2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_FullScreen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img_FullScreen1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_smallwindow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img_smallwindow.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_fullscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img_fullscreen.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_CancelFullScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img_CancelFullScreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_pen_on_paper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img_pen_on_paper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stopwatch_start" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\stopwatch_start.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stopwatch_reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\stopwatch_reset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stopwatch_pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\stopwatch_pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stopwatch_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\stopwatch_flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_alarm_ring" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img_alarm_ring.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
