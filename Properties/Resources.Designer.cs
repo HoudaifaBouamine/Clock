@@ -143,6 +143,36 @@ namespace Clock.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap img_ring_duration {
+            get {
+                object obj = ResourceManager.GetObject("img_ring_duration", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_ring_duration2 {
+            get {
+                object obj = ResourceManager.GetObject("img_ring_duration2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_ring_duration3 {
+            get {
+                object obj = ResourceManager.GetObject("img_ring_duration3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_smallwindow {
             get {
                 object obj = ResourceManager.GetObject("img_smallwindow", resourceCulture);

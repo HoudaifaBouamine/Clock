@@ -28,43 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_time = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_duration = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
             this.btn_on_off = new System.Windows.Forms.Button();
+            this.timer_updateAlarm = new System.Windows.Forms.Timer(this.components);
+            this.notify_alarm = new System.Windows.Forms.NotifyIcon(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_time
             // 
             this.lbl_time.AutoSize = true;
-            this.lbl_time.Font = new System.Drawing.Font("Segoe UI Semibold", 38.8F, System.Drawing.FontStyle.Bold);
-            this.lbl_time.Location = new System.Drawing.Point(20, 20);
+            this.lbl_time.Font = new System.Drawing.Font("Segoe UI Semibold", 54.8F, System.Drawing.FontStyle.Bold);
+            this.lbl_time.Location = new System.Drawing.Point(3, 0);
             this.lbl_time.Name = "lbl_time";
-            this.lbl_time.Size = new System.Drawing.Size(160, 87);
+            this.lbl_time.Size = new System.Drawing.Size(225, 123);
             this.lbl_time.TabIndex = 0;
             this.lbl_time.Text = "7:00";
+            this.lbl_time.Click += new System.EventHandler(this.MyAlarm_Click);
             // 
-            // label1
+            // lbl_duration
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.label1.Location = new System.Drawing.Point(30, 119);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "in 6 hours and some minites";
+            this.lbl_duration.AutoSize = true;
+            this.lbl_duration.Font = new System.Drawing.Font("Segoe UI Semibold", 9.8F, System.Drawing.FontStyle.Bold);
+            this.lbl_duration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.lbl_duration.Location = new System.Drawing.Point(57, 112);
+            this.lbl_duration.Name = "lbl_duration";
+            this.lbl_duration.Size = new System.Drawing.Size(226, 23);
+            this.lbl_duration.TabIndex = 1;
+            this.lbl_duration.Text = "in 6 hours and some minites";
+            this.lbl_duration.Click += new System.EventHandler(this.MyAlarm_Click);
             // 
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
-            this.lbl_name.Font = new System.Drawing.Font("Segoe UI Semibold", 20.8F, System.Drawing.FontStyle.Bold);
+            this.lbl_name.Font = new System.Drawing.Font("Segoe UI Semibold", 16.8F, System.Drawing.FontStyle.Bold);
             this.lbl_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.lbl_name.Location = new System.Drawing.Point(27, 155);
+            this.lbl_name.Location = new System.Drawing.Point(26, 133);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(163, 47);
+            this.lbl_name.Size = new System.Drawing.Size(130, 38);
             this.lbl_name.TabIndex = 2;
             this.lbl_name.Text = "Alarm (1)";
+            this.lbl_name.Click += new System.EventHandler(this.MyAlarm_Click);
             // 
             // btn_on_off
             // 
@@ -80,14 +89,41 @@
             this.btn_on_off.Text = "On";
             this.btn_on_off.UseVisualStyleBackColor = false;
             // 
+            // timer_updateAlarm
+            // 
+            this.timer_updateAlarm.Interval = 1000;
+            this.timer_updateAlarm.Tick += new System.EventHandler(this.timer_updateAlarm_Tick);
+            // 
+            // notify_alarm
+            // 
+            this.notify_alarm.Text = "Alarm Done";
+            this.notify_alarm.Visible = true;
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Clock.Properties.Resources.img_ring_duration3;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(33, 115);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(18, 18);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.MyAlarm_Click);
+            // 
             // MyAlarm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_on_off);
             this.Controls.Add(this.lbl_name);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_duration);
             this.Controls.Add(this.lbl_time);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
@@ -95,6 +131,10 @@
             this.Name = "MyAlarm";
             this.Size = new System.Drawing.Size(661, 243);
             this.Load += new System.EventHandler(this.MyAlarm_Load);
+            this.Click += new System.EventHandler(this.MyAlarm_Click);
+            this.Enter += new System.EventHandler(this.MyAlarm_Enter);
+            this.Leave += new System.EventHandler(this.MyAlarm_Leave);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,8 +143,12 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_time;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_duration;
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.Button btn_on_off;
+        private System.Windows.Forms.Timer timer_updateAlarm;
+        private System.Windows.Forms.NotifyIcon notify_alarm;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

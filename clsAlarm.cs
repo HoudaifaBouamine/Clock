@@ -1,67 +1,67 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Clock
 {
-    public partial class MyAlarm : UserControl
+    public class clsAlarm
     {
-        public MyAlarm()
+        public string name;
+        public string sound_name;
+
+        public DateTime alarm_date_time;
+        public TimeSpan duration_date_time;
+
+        public byte days_flags;
+
+        public bool on;
+
+
+        public void setAlarm(int hour,int min)
         {
-            InitializeComponent();
+            this.alarm_date_time = new DateTime(DateTime.Now.Year,DateTime.Now.Month,DateTime.Now.Day,hour,min,0);
+            this.duration_date_time = this.alarm_date_time - DateTime.Now;
+            this.update();
+
         }
 
-        private void MyAlarm_Load(object sender, EventArgs e)
+        public void update()
         {
+            this.duration_date_time = this.alarm_date_time - DateTime.Now + new TimeSpan(0,1,0);
 
-        }
-
-        class clsAlarmClass
-        {
-            public string name;
-            public string sound_name;
-
-            public DateTime alarm_date_time;
-            public TimeSpan duration_date_time;
-
-            public byte days_flags;
-
-            public bool on;
-
-            clsAlarmClass()
+            if(this.duration_date_time.TotalSeconds < 0)
             {
-                this.name = "Alarm";
-                this.on = true;
-                this.sound_name = "Ring";
-                this.alarm_date_time = new DateTime();
-                this.duration_date_time = new TimeSpan();
-                this.days_flags = 0;
-
-            }
-            clsAlarmClass(int hour, int min)
-            {
-                this.name = "Alarm";
-                this.on = true;
-                this.sound_name = "Ring";
-                this.alarm_date_time = new DateTime();
-
-                this.alarm_date_time = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, hour, min, 0);
-
-                this.duration_date_time = this.alarm_date_time - DateTime.Now;
-                this.days_flags = 0;
-
-
+                this.duration_date_time += new TimeSpan(1, 0, 0, 0);
             }
 
         }
 
-        clsAlarmClass alarmInfo;
+        public clsAlarm()
+        {
+            this.name = "Alarm";
+            this.on = true;
+            this.sound_name = "Ring";
+            this.alarm_date_time = new DateTime();
+            this.duration_date_time = new TimeSpan();
+            this.days_flags = 0;
+
+        }
+        public clsAlarm(int hour, int min)
+        {
+            this.name = "Alarm";
+            this.on = true;
+            this.sound_name = "Ring";
+            this.alarm_date_time = new DateTime();
+
+            this.alarm_date_time = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, hour, min, 0);
+
+            this.duration_date_time = this.alarm_date_time - DateTime.Now;
+            this.days_flags = 0;
+
+
+        }
 
     }
 }

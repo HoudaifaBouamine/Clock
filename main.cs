@@ -595,12 +595,14 @@ namespace Clock
             if (button == btn_tab_timer)
             {
 
+                
                 tbc_main.SelectedIndex = 0;
 
             }
             else if (button == btn_tab_alarm)
             {
 
+                
                 tbc_main.SelectedIndex = 1;
 
             }
@@ -867,12 +869,6 @@ namespace Clock
         private void btn_Close_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void alarm1_Click(object sender, EventArgs e)
-        {
-            frm_AlarmSettings frm = new frm_AlarmSettings();
-            frm.ShowDialog();
         }
 
         private void alarm1_Load(object sender, EventArgs e)

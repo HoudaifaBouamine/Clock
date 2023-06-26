@@ -51,7 +51,6 @@ namespace Clock
             this.lbl_timer_title = new System.Windows.Forms.Label();
             this.circularProgressBar = new CircularProgressBar.CircularProgressBar();
             this.tp_alarm = new System.Windows.Forms.TabPage();
-            this.alarm1 = new Clock.MyAlarm();
             this.tp_Stopwatch = new System.Windows.Forms.TabPage();
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Smallwindow = new System.Windows.Forms.Button();
@@ -71,6 +70,7 @@ namespace Clock
             this.btn_tab_clock = new System.Windows.Forms.Button();
             this.timer_timer_down = new System.Windows.Forms.Timer(this.components);
             this.notification = new System.Windows.Forms.NotifyIcon(this.components);
+            this.alarm1 = new Clock.MyAlarm();
             this.tbc_main.SuspendLayout();
             this.tb_timer.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -346,19 +346,6 @@ namespace Clock
             this.tp_alarm.TabIndex = 2;
             this.tp_alarm.Text = "Alarm";
             // 
-            // alarm1
-            // 
-            this.alarm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.alarm1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alarm1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.alarm1.Location = new System.Drawing.Point(59, 25);
-            this.alarm1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.alarm1.Name = "alarm1";
-            this.alarm1.Size = new System.Drawing.Size(661, 243);
-            this.alarm1.TabIndex = 0;
-            this.alarm1.Load += new System.EventHandler(this.alarm1_Load);
-            this.alarm1.Click += new System.EventHandler(this.alarm1_Click);
-            // 
             // tp_Stopwatch
             // 
             this.tp_Stopwatch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
@@ -390,7 +377,7 @@ namespace Clock
             this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.btn_Close.Location = new System.Drawing.Point(738, 0);
+            this.btn_Close.Location = new System.Drawing.Point(-464, 0);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(55, 36);
             this.btn_Close.TabIndex = 14;
@@ -438,7 +425,7 @@ namespace Clock
             this.lvc_stopwatch_total});
             this.lv_recordes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
             this.lv_recordes.HideSelection = false;
-            this.lv_recordes.Location = new System.Drawing.Point(57, 421);
+            this.lv_recordes.Location = new System.Drawing.Point(57, -143);
             this.lv_recordes.Name = "lv_recordes";
             this.lv_recordes.Size = new System.Drawing.Size(669, 239);
             this.lv_recordes.TabIndex = 11;
@@ -606,6 +593,18 @@ namespace Clock
             // 
             this.notification.Text = "notifyIcon1";
             this.notification.Visible = true;
+            // 
+            // alarm1
+            // 
+            this.alarm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.alarm1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alarm1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.alarm1.Location = new System.Drawing.Point(59, 25);
+            this.alarm1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.alarm1.Name = "alarm1";
+            this.alarm1.Size = new System.Drawing.Size(661, 243);
+            this.alarm1.TabIndex = 0;
+            this.alarm1.Load += new System.EventHandler(this.alarm1_Load);
             // 
             // main_form
             // 

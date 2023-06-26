@@ -52,11 +52,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsAlarm.cs">
+    <Compile Include="clsAlarm.cs" />
+    <Compile Include="ucAlarm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="clsAlarm.Designer.cs">
-      <DependentUpon>clsAlarm.cs</DependentUpon>
+    <Compile Include="ucAlarm.Designer.cs">
+      <DependentUpon>ucAlarm.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_AlarmSettings.cs">
       <SubType>Form</SubType>
@@ -78,8 +79,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="clsAlarm.resx">
-      <DependentUpon>clsAlarm.cs</DependentUpon>
+    <EmbeddedResource Include="ucAlarm.resx">
+      <DependentUpon>ucAlarm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_AlarmSettings.resx">
       <DependentUpon>frm_AlarmSettings.cs</DependentUpon>
@@ -152,6 +153,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\img_alarm_ring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_ring_duration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_ring_duration2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_ring_duration3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

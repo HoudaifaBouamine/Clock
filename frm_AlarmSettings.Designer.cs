@@ -135,13 +135,14 @@
             this.btn_up_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_up_min.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, System.Drawing.FontStyle.Bold);
             this.btn_up_min.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.btn_up_min.Location = new System.Drawing.Point(229, 103);
+            this.btn_up_min.Location = new System.Drawing.Point(235, 104);
             this.btn_up_min.Name = "btn_up_min";
             this.btn_up_min.Size = new System.Drawing.Size(71, 55);
             this.btn_up_min.TabIndex = 15;
             this.btn_up_min.Text = "︿";
             this.btn_up_min.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btn_up_min.UseVisualStyleBackColor = false;
+            this.btn_up_min.Click += new System.EventHandler(this.btn_up_min_Click);
             // 
             // btn_up_hour
             // 
@@ -151,13 +152,14 @@
             this.btn_up_hour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_up_hour.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, System.Drawing.FontStyle.Bold);
             this.btn_up_hour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.btn_up_hour.Location = new System.Drawing.Point(106, 103);
+            this.btn_up_hour.Location = new System.Drawing.Point(116, 104);
             this.btn_up_hour.Name = "btn_up_hour";
             this.btn_up_hour.Size = new System.Drawing.Size(71, 55);
             this.btn_up_hour.TabIndex = 13;
             this.btn_up_hour.Text = "︿";
             this.btn_up_hour.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btn_up_hour.UseVisualStyleBackColor = false;
+            this.btn_up_hour.Click += new System.EventHandler(this.btn_up_hour_Click);
             // 
             // btn_down_min
             // 
@@ -167,13 +169,14 @@
             this.btn_down_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_down_min.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, System.Drawing.FontStyle.Bold);
             this.btn_down_min.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.btn_down_min.Location = new System.Drawing.Point(229, 245);
+            this.btn_down_min.Location = new System.Drawing.Point(235, 245);
             this.btn_down_min.Name = "btn_down_min";
             this.btn_down_min.Size = new System.Drawing.Size(71, 55);
             this.btn_down_min.TabIndex = 18;
             this.btn_down_min.Text = "﹀";
             this.btn_down_min.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btn_down_min.UseVisualStyleBackColor = false;
+            this.btn_down_min.Click += new System.EventHandler(this.btn_down_min_Click);
             // 
             // btn_down_hour
             // 
@@ -183,13 +186,14 @@
             this.btn_down_hour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_down_hour.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, System.Drawing.FontStyle.Bold);
             this.btn_down_hour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            this.btn_down_hour.Location = new System.Drawing.Point(106, 245);
+            this.btn_down_hour.Location = new System.Drawing.Point(113, 245);
             this.btn_down_hour.Name = "btn_down_hour";
             this.btn_down_hour.Size = new System.Drawing.Size(71, 55);
             this.btn_down_hour.TabIndex = 17;
             this.btn_down_hour.Text = "﹀";
             this.btn_down_hour.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btn_down_hour.UseVisualStyleBackColor = false;
+            this.btn_down_hour.Click += new System.EventHandler(this.btn_down_hour_Click);
             // 
             // tb_AlarmName
             // 
@@ -301,6 +305,11 @@
             this.cb_Sound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_Sound.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
             this.cb_Sound.FormattingEnabled = true;
+            this.cb_Sound.Items.AddRange(new object[] {
+            "Ring ring",
+            "Ring ring 2",
+            "wow",
+            "hi"});
             this.cb_Sound.Location = new System.Drawing.Point(89, 509);
             this.cb_Sound.Name = "cb_Sound";
             this.cb_Sound.Size = new System.Drawing.Size(285, 36);
@@ -312,6 +321,13 @@
             this.cb_SoundDuration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_SoundDuration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
             this.cb_SoundDuration.FormattingEnabled = true;
+            this.cb_SoundDuration.Items.AddRange(new object[] {
+            "Disable",
+            "5 minutes",
+            "10 minutes",
+            "20 minutes",
+            "30 minutes",
+            "1 hour"});
             this.cb_SoundDuration.Location = new System.Drawing.Point(89, 566);
             this.cb_SoundDuration.Name = "cb_SoundDuration";
             this.cb_SoundDuration.Size = new System.Drawing.Size(285, 36);
@@ -328,6 +344,7 @@
             this.btn_Save.TabIndex = 36;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Cancel
             // 
