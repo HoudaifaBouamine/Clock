@@ -121,6 +121,9 @@
   <data name="img_Maximize2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img_Maximize2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="img_Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_Delete.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="img_Minimize2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img_Minimize2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,13 +136,16 @@
   <data name="img_Close2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img_Close2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="img_Maximize1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img_Maximize1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="img_Maximize3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img_Maximize3.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="img_Maximize4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img_Maximize4.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_Maximize1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_Maximize1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_stopwatch_pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_stopwatch_pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

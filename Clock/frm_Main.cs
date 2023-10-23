@@ -146,8 +146,8 @@ namespace Clock
 
         private void btn_Minimize_MouseEnter(object sender, EventArgs e)
         {
-                btn_Minimize.BackgroundImage = Resources.img_Minimize2;
-           
+            btn_Minimize.BackgroundImage = Resources.img_Minimize2;
+
         }
 
         private void btn_Minimize_MouseLeave(object sender, EventArgs e)
@@ -185,6 +185,25 @@ namespace Clock
             else
             {
                 this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void frm_Main_Resize(object sender, EventArgs e)
+        {
+            if (this.Width < 550)
+            {
+                pnl_SmallSideMenu.Visible = false;
+                pnl_SideMenu.Visible = false;
+            }
+            else if (this.Width < 1000)
+            {
+                pnl_SideMenu.Visible = false;
+                pnl_SmallSideMenu.Visible = true;
+            }
+            else
+            {
+                pnl_SideMenu.Visible = true;
+                pnl_SmallSideMenu.Visible = false;
             }
         }
     }

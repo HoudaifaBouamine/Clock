@@ -83,6 +83,16 @@ namespace Clock.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap img_Delete {
+            get {
+                object obj = ResourceManager.GetObject("img_Delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_Maximize1 {
             get {
                 object obj = ResourceManager.GetObject("img_Maximize1", resourceCulture);
@@ -136,6 +146,16 @@ namespace Clock.Properties {
         internal static System.Drawing.Bitmap img_Minimize2 {
             get {
                 object obj = ResourceManager.GetObject("img_Minimize2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_stopwatch_pause {
+            get {
+                object obj = ResourceManager.GetObject("img_stopwatch_pause", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
