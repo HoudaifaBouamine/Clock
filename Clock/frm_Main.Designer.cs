@@ -28,28 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             pnl_SmallSideMenu = new Panel();
             btn_WorldClockSmall = new Guna.UI2.WinForms.Guna2Button();
             btn_StopwatchSmall = new Guna.UI2.WinForms.Guna2Button();
@@ -69,6 +72,7 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             pnl_SideMenuHeader = new Panel();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             pnl_MainContant = new Panel();
             pnl_Main = new Guna.UI2.WinForms.Guna2Panel();
             pnl_MainContantHeader = new Panel();
@@ -82,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pnl_SideMenuHeader.SuspendLayout();
             pnl_MainContant.SuspendLayout();
             pnl_MainContantHeader.SuspendLayout();
             SuspendLayout();
@@ -104,7 +109,7 @@
             // 
             // btn_WorldClockSmall
             // 
-            btn_WorldClockSmall.CustomizableEdges = customizableEdges23;
+            btn_WorldClockSmall.CustomizableEdges = customizableEdges1;
             btn_WorldClockSmall.DisabledState.BorderColor = Color.DarkGray;
             btn_WorldClockSmall.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_WorldClockSmall.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -115,20 +120,19 @@
             btn_WorldClockSmall.Font = new Font("Segoe UI", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
             btn_WorldClockSmall.ForeColor = Color.White;
             btn_WorldClockSmall.Image = Properties.Resources.img_stopwatch_pause;
-            btn_WorldClockSmall.ImageAlign = HorizontalAlignment.Left;
-            btn_WorldClockSmall.ImageOffset = new Point(3, 0);
+            btn_WorldClockSmall.ImageOffset = new Point(-2, 0);
             btn_WorldClockSmall.ImageSize = new Size(30, 30);
             btn_WorldClockSmall.Location = new Point(0, 249);
             btn_WorldClockSmall.Name = "btn_WorldClockSmall";
             btn_WorldClockSmall.Padding = new Padding(10, 0, 0, 0);
-            btn_WorldClockSmall.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btn_WorldClockSmall.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btn_WorldClockSmall.Size = new Size(51, 51);
             btn_WorldClockSmall.TabIndex = 20;
             btn_WorldClockSmall.TextAlign = HorizontalAlignment.Left;
             // 
             // btn_StopwatchSmall
             // 
-            btn_StopwatchSmall.CustomizableEdges = customizableEdges25;
+            btn_StopwatchSmall.CustomizableEdges = customizableEdges3;
             btn_StopwatchSmall.DisabledState.BorderColor = Color.DarkGray;
             btn_StopwatchSmall.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_StopwatchSmall.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -139,20 +143,19 @@
             btn_StopwatchSmall.Font = new Font("Segoe UI", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
             btn_StopwatchSmall.ForeColor = Color.White;
             btn_StopwatchSmall.Image = Properties.Resources.img_stopwatch_pause;
-            btn_StopwatchSmall.ImageAlign = HorizontalAlignment.Left;
-            btn_StopwatchSmall.ImageOffset = new Point(3, 0);
+            btn_StopwatchSmall.ImageOffset = new Point(-2, 0);
             btn_StopwatchSmall.ImageSize = new Size(30, 30);
             btn_StopwatchSmall.Location = new Point(0, 198);
             btn_StopwatchSmall.Name = "btn_StopwatchSmall";
             btn_StopwatchSmall.Padding = new Padding(10, 0, 0, 0);
-            btn_StopwatchSmall.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btn_StopwatchSmall.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btn_StopwatchSmall.Size = new Size(51, 51);
             btn_StopwatchSmall.TabIndex = 19;
             btn_StopwatchSmall.TextAlign = HorizontalAlignment.Left;
             // 
             // btn_AlarmSmall
             // 
-            btn_AlarmSmall.CustomizableEdges = customizableEdges27;
+            btn_AlarmSmall.CustomizableEdges = customizableEdges5;
             btn_AlarmSmall.DisabledState.BorderColor = Color.DarkGray;
             btn_AlarmSmall.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_AlarmSmall.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -163,20 +166,19 @@
             btn_AlarmSmall.Font = new Font("Segoe UI", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
             btn_AlarmSmall.ForeColor = Color.White;
             btn_AlarmSmall.Image = Properties.Resources.img_stopwatch_pause;
-            btn_AlarmSmall.ImageAlign = HorizontalAlignment.Left;
-            btn_AlarmSmall.ImageOffset = new Point(3, 0);
+            btn_AlarmSmall.ImageOffset = new Point(-2, 0);
             btn_AlarmSmall.ImageSize = new Size(30, 30);
             btn_AlarmSmall.Location = new Point(0, 147);
             btn_AlarmSmall.Name = "btn_AlarmSmall";
             btn_AlarmSmall.Padding = new Padding(10, 0, 0, 0);
-            btn_AlarmSmall.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btn_AlarmSmall.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btn_AlarmSmall.Size = new Size(51, 51);
             btn_AlarmSmall.TabIndex = 18;
             btn_AlarmSmall.TextAlign = HorizontalAlignment.Left;
             // 
             // btn_TimerSmall
             // 
-            btn_TimerSmall.CustomizableEdges = customizableEdges29;
+            btn_TimerSmall.CustomizableEdges = customizableEdges7;
             btn_TimerSmall.DisabledState.BorderColor = Color.DarkGray;
             btn_TimerSmall.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_TimerSmall.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -187,20 +189,19 @@
             btn_TimerSmall.Font = new Font("Segoe UI", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
             btn_TimerSmall.ForeColor = Color.White;
             btn_TimerSmall.Image = Properties.Resources.img_stopwatch_pause;
-            btn_TimerSmall.ImageAlign = HorizontalAlignment.Left;
-            btn_TimerSmall.ImageOffset = new Point(3, 0);
+            btn_TimerSmall.ImageOffset = new Point(-2, 0);
             btn_TimerSmall.ImageSize = new Size(30, 30);
             btn_TimerSmall.Location = new Point(0, 96);
             btn_TimerSmall.Name = "btn_TimerSmall";
             btn_TimerSmall.Padding = new Padding(10, 0, 0, 0);
-            btn_TimerSmall.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btn_TimerSmall.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btn_TimerSmall.Size = new Size(51, 51);
             btn_TimerSmall.TabIndex = 17;
             btn_TimerSmall.TextAlign = HorizontalAlignment.Left;
             // 
             // btn_FocusSessionsSmall
             // 
-            btn_FocusSessionsSmall.CustomizableEdges = customizableEdges31;
+            btn_FocusSessionsSmall.CustomizableEdges = customizableEdges9;
             btn_FocusSessionsSmall.DisabledState.BorderColor = Color.DarkGray;
             btn_FocusSessionsSmall.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_FocusSessionsSmall.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -211,13 +212,12 @@
             btn_FocusSessionsSmall.Font = new Font("Segoe UI", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
             btn_FocusSessionsSmall.ForeColor = Color.White;
             btn_FocusSessionsSmall.Image = Properties.Resources.img_stopwatch_pause;
-            btn_FocusSessionsSmall.ImageAlign = HorizontalAlignment.Left;
-            btn_FocusSessionsSmall.ImageOffset = new Point(3, 0);
+            btn_FocusSessionsSmall.ImageOffset = new Point(-2, 0);
             btn_FocusSessionsSmall.ImageSize = new Size(30, 30);
             btn_FocusSessionsSmall.Location = new Point(0, 45);
             btn_FocusSessionsSmall.Name = "btn_FocusSessionsSmall";
             btn_FocusSessionsSmall.Padding = new Padding(10, 0, 0, 0);
-            btn_FocusSessionsSmall.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            btn_FocusSessionsSmall.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btn_FocusSessionsSmall.Size = new Size(51, 51);
             btn_FocusSessionsSmall.TabIndex = 16;
             btn_FocusSessionsSmall.TextAlign = HorizontalAlignment.Left;
@@ -253,7 +253,7 @@
             // 
             // btn_WorldClock
             // 
-            btn_WorldClock.CustomizableEdges = customizableEdges33;
+            btn_WorldClock.CustomizableEdges = customizableEdges11;
             btn_WorldClock.DisabledState.BorderColor = Color.DarkGray;
             btn_WorldClock.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_WorldClock.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -270,7 +270,7 @@
             btn_WorldClock.Location = new Point(0, 249);
             btn_WorldClock.Name = "btn_WorldClock";
             btn_WorldClock.Padding = new Padding(10, 0, 0, 0);
-            btn_WorldClock.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            btn_WorldClock.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btn_WorldClock.Size = new Size(249, 51);
             btn_WorldClock.TabIndex = 15;
             btn_WorldClock.Text = "World clock";
@@ -278,7 +278,7 @@
             // 
             // btn_Stopwatch
             // 
-            btn_Stopwatch.CustomizableEdges = customizableEdges35;
+            btn_Stopwatch.CustomizableEdges = customizableEdges13;
             btn_Stopwatch.DisabledState.BorderColor = Color.DarkGray;
             btn_Stopwatch.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Stopwatch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -295,7 +295,7 @@
             btn_Stopwatch.Location = new Point(0, 198);
             btn_Stopwatch.Name = "btn_Stopwatch";
             btn_Stopwatch.Padding = new Padding(10, 0, 0, 0);
-            btn_Stopwatch.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            btn_Stopwatch.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btn_Stopwatch.Size = new Size(249, 51);
             btn_Stopwatch.TabIndex = 14;
             btn_Stopwatch.Text = "Stopwatch";
@@ -303,7 +303,7 @@
             // 
             // btn_Alarm
             // 
-            btn_Alarm.CustomizableEdges = customizableEdges37;
+            btn_Alarm.CustomizableEdges = customizableEdges15;
             btn_Alarm.DisabledState.BorderColor = Color.DarkGray;
             btn_Alarm.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Alarm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -320,7 +320,7 @@
             btn_Alarm.Location = new Point(0, 147);
             btn_Alarm.Name = "btn_Alarm";
             btn_Alarm.Padding = new Padding(10, 0, 0, 0);
-            btn_Alarm.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            btn_Alarm.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btn_Alarm.Size = new Size(249, 51);
             btn_Alarm.TabIndex = 13;
             btn_Alarm.Text = "Alarm";
@@ -328,7 +328,7 @@
             // 
             // btn_Timer
             // 
-            btn_Timer.CustomizableEdges = customizableEdges39;
+            btn_Timer.CustomizableEdges = customizableEdges17;
             btn_Timer.DisabledState.BorderColor = Color.DarkGray;
             btn_Timer.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Timer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -345,7 +345,7 @@
             btn_Timer.Location = new Point(0, 96);
             btn_Timer.Name = "btn_Timer";
             btn_Timer.Padding = new Padding(10, 0, 0, 0);
-            btn_Timer.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            btn_Timer.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btn_Timer.Size = new Size(249, 51);
             btn_Timer.TabIndex = 12;
             btn_Timer.Text = "Timer";
@@ -353,7 +353,7 @@
             // 
             // btn_FocusSessions
             // 
-            btn_FocusSessions.CustomizableEdges = customizableEdges41;
+            btn_FocusSessions.CustomizableEdges = customizableEdges19;
             btn_FocusSessions.DisabledState.BorderColor = Color.DarkGray;
             btn_FocusSessions.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_FocusSessions.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -370,7 +370,7 @@
             btn_FocusSessions.Location = new Point(0, 45);
             btn_FocusSessions.Name = "btn_FocusSessions";
             btn_FocusSessions.Padding = new Padding(10, 0, 0, 0);
-            btn_FocusSessions.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            btn_FocusSessions.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btn_FocusSessions.Size = new Size(249, 51);
             btn_FocusSessions.TabIndex = 11;
             btn_FocusSessions.Text = "Focus sessions";
@@ -418,12 +418,40 @@
             // 
             // pnl_SideMenuHeader
             // 
+            pnl_SideMenuHeader.Controls.Add(guna2Button1);
             pnl_SideMenuHeader.Dock = DockStyle.Top;
             pnl_SideMenuHeader.Location = new Point(0, 0);
             pnl_SideMenuHeader.Name = "pnl_SideMenuHeader";
             pnl_SideMenuHeader.Size = new Size(249, 45);
             pnl_SideMenuHeader.TabIndex = 1;
             pnl_SideMenuHeader.MouseDown += pnl_MainContantHeader_MouseDown;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.CustomizableEdges = customizableEdges21;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Dock = DockStyle.Fill;
+            guna2Button1.FillColor = Color.FromArgb(32, 32, 32);
+            guna2Button1.FocusedColor = Color.Red;
+            guna2Button1.Font = new Font("Segoe UI", 8.5F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.HoverState.FillColor = Color.FromArgb(32, 32, 32);
+            guna2Button1.Image = Properties.Resources.img_ClockAppIcon;
+            guna2Button1.ImageAlign = HorizontalAlignment.Left;
+            guna2Button1.ImageOffset = new Point(3, 0);
+            guna2Button1.Location = new Point(0, 0);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.Padding = new Padding(10, 0, 0, 0);
+            guna2Button1.PressedColor = Color.FromArgb(32, 32, 32);
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2Button1.Size = new Size(249, 45);
+            guna2Button1.TabIndex = 16;
+            guna2Button1.Text = "World clock";
+            guna2Button1.TextAlign = HorizontalAlignment.Left;
+            guna2Button1.MouseDown += guna2Button1_MouseDown;
             // 
             // pnl_MainContant
             // 
@@ -438,11 +466,11 @@
             // 
             // pnl_Main
             // 
-            pnl_Main.CustomizableEdges = customizableEdges43;
+            pnl_Main.CustomizableEdges = customizableEdges23;
             pnl_Main.Dock = DockStyle.Fill;
             pnl_Main.Location = new Point(0, 40);
             pnl_Main.Name = "pnl_Main";
-            pnl_Main.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            pnl_Main.ShadowDecoration.CustomizableEdges = customizableEdges24;
             pnl_Main.Size = new Size(692, 585);
             pnl_Main.TabIndex = 2;
             // 
@@ -526,6 +554,7 @@
             Controls.Add(pnl_SmallSideMenu);
             Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(415, 0);
             Name = "frm_Main";
             Padding = new Padding(4);
@@ -538,6 +567,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            pnl_SideMenuHeader.ResumeLayout(false);
             pnl_MainContant.ResumeLayout(false);
             pnl_MainContantHeader.ResumeLayout(false);
             ResumeLayout(false);
@@ -570,5 +600,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_AlarmSmall;
         private Guna.UI2.WinForms.Guna2Button btn_TimerSmall;
         private Guna.UI2.WinForms.Guna2Button btn_FocusSessionsSmall;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

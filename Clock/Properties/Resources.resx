@@ -130,6 +130,9 @@
   <data name="img_Minimize1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img_Minimize1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="img_stopwatch_pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_stopwatch_pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="img_Close1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img_Close1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,7 +148,7 @@
   <data name="img_Maximize1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img_Maximize1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="img_stopwatch_pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img_stopwatch_pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="img_ClockAppIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_ClockAppIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

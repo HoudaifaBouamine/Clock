@@ -101,6 +101,15 @@ namespace Clock
             }
         }
 
+        private void guna2Button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
         #endregion
 
         private void btn_Close_MouseHover(object sender, EventArgs e)
@@ -206,6 +215,8 @@ namespace Clock
                 pnl_SmallSideMenu.Visible = false;
             }
         }
+
+
     }
 
 
