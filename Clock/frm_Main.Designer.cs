@@ -129,6 +129,7 @@
             btn_WorldClockSmall.Size = new Size(51, 51);
             btn_WorldClockSmall.TabIndex = 20;
             btn_WorldClockSmall.TextAlign = HorizontalAlignment.Left;
+            btn_WorldClockSmall.Click += btn_WorldClock_Click;
             // 
             // btn_StopwatchSmall
             // 
@@ -152,6 +153,7 @@
             btn_StopwatchSmall.Size = new Size(51, 51);
             btn_StopwatchSmall.TabIndex = 19;
             btn_StopwatchSmall.TextAlign = HorizontalAlignment.Left;
+            btn_StopwatchSmall.Click += btn_Stopwatch_Click;
             // 
             // btn_AlarmSmall
             // 
@@ -175,6 +177,7 @@
             btn_AlarmSmall.Size = new Size(51, 51);
             btn_AlarmSmall.TabIndex = 18;
             btn_AlarmSmall.TextAlign = HorizontalAlignment.Left;
+            btn_AlarmSmall.Click += btn_Alarm_Click;
             // 
             // btn_TimerSmall
             // 
@@ -198,6 +201,7 @@
             btn_TimerSmall.Size = new Size(51, 51);
             btn_TimerSmall.TabIndex = 17;
             btn_TimerSmall.TextAlign = HorizontalAlignment.Left;
+            btn_TimerSmall.Click += btn_Timer_Click;
             // 
             // btn_FocusSessionsSmall
             // 
@@ -221,6 +225,7 @@
             btn_FocusSessionsSmall.Size = new Size(51, 51);
             btn_FocusSessionsSmall.TabIndex = 16;
             btn_FocusSessionsSmall.TextAlign = HorizontalAlignment.Left;
+            btn_FocusSessionsSmall.Click += btn_FocusSessions_Click;
             // 
             // pnl_SmallSideMenuHeader
             // 
@@ -275,6 +280,7 @@
             btn_WorldClock.TabIndex = 15;
             btn_WorldClock.Text = "World clock";
             btn_WorldClock.TextAlign = HorizontalAlignment.Left;
+            btn_WorldClock.Click += btn_WorldClock_Click;
             // 
             // btn_Stopwatch
             // 
@@ -300,6 +306,7 @@
             btn_Stopwatch.TabIndex = 14;
             btn_Stopwatch.Text = "Stopwatch";
             btn_Stopwatch.TextAlign = HorizontalAlignment.Left;
+            btn_Stopwatch.Click += btn_Stopwatch_Click;
             // 
             // btn_Alarm
             // 
@@ -325,6 +332,7 @@
             btn_Alarm.TabIndex = 13;
             btn_Alarm.Text = "Alarm";
             btn_Alarm.TextAlign = HorizontalAlignment.Left;
+            btn_Alarm.Click += btn_Alarm_Click;
             // 
             // btn_Timer
             // 
@@ -350,6 +358,7 @@
             btn_Timer.TabIndex = 12;
             btn_Timer.Text = "Timer";
             btn_Timer.TextAlign = HorizontalAlignment.Left;
+            btn_Timer.Click += btn_Timer_Click;
             // 
             // btn_FocusSessions
             // 
@@ -375,6 +384,7 @@
             btn_FocusSessions.TabIndex = 11;
             btn_FocusSessions.Text = "Focus sessions";
             btn_FocusSessions.TextAlign = HorizontalAlignment.Left;
+            btn_FocusSessions.Click += btn_FocusSessions_Click;
             // 
             // pictureBox5
             // 

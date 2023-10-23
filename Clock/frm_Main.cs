@@ -20,7 +20,7 @@ namespace Clock
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true); // this is to avoid visual artifacts
 
-
+            clsGlobal.ScreensContainer = pnl_Main;
         }
 
         #region Resize Window
@@ -216,7 +216,30 @@ namespace Clock
             }
         }
 
+        private void btn_FocusSessions_Click(object sender, EventArgs e)
+        {
+            clsGlobal.CurrentScreen = clsGlobal.enCurrentScreen.FocusSessions;
+        }
 
+        private void btn_Timer_Click(object sender, EventArgs e)
+        {
+            clsGlobal.CurrentScreen = clsGlobal.enCurrentScreen.Timer;
+        }
+
+        private void btn_Alarm_Click(object sender, EventArgs e)
+        {
+            clsGlobal.CurrentScreen = clsGlobal.enCurrentScreen.Alarm;
+        }
+
+        private void btn_Stopwatch_Click(object sender, EventArgs e)
+        {
+            clsGlobal.CurrentScreen = clsGlobal.enCurrentScreen.Stopwatch;
+        }
+
+        private void btn_WorldClock_Click(object sender, EventArgs e)
+        {
+            clsGlobal.CurrentScreen = clsGlobal.enCurrentScreen.WorldClock;
+        }
     }
 
 
