@@ -60,7 +60,7 @@ namespace Clock
         {
             base.WndProc(ref message);
 
-            if(WindowState == FormWindowState.Maximized) { return; }
+            if (WindowState == FormWindowState.Maximized) { return; }
 
             if (message.Msg == 0x84) // WM_NCHITTEST
             {
@@ -109,13 +109,27 @@ namespace Clock
 
         private void btn_Maximize_MouseEnter(object sender, EventArgs e)
         {
-            btn_Maximize.BackgroundImage = Resources.img_Maximize2;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                btn_Maximize.BackgroundImage = Resources.img_Maximize2;
+            }
+            else
+            {
+                btn_Maximize.BackgroundImage = Resources.img_Maximize4;
+            }
         }
 
         private void btn_Maximize_MouseLeave(object sender, EventArgs e)
         {
-            btn_Maximize.BackgroundImage = Resources.img_Maximize1;
 
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                btn_Maximize.BackgroundImage = Resources.img_Maximize1;
+            }
+            else
+            {
+                btn_Maximize.BackgroundImage = Resources.img_Maximize3;
+            }
         }
 
         private void btn_Close_MouseEnter(object sender, EventArgs e)
@@ -132,7 +146,8 @@ namespace Clock
 
         private void btn_Minimize_MouseEnter(object sender, EventArgs e)
         {
-            btn_Minimize.BackgroundImage = Resources.img_Minimize2;
+                btn_Minimize.BackgroundImage = Resources.img_Minimize2;
+           
         }
 
         private void btn_Minimize_MouseLeave(object sender, EventArgs e)
@@ -152,14 +167,26 @@ namespace Clock
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
+                btn_Maximize.BackgroundImage = Resources.img_Maximize3;
             }
             else
             {
                 this.WindowState = FormWindowState.Maximized;
+                btn_Maximize.BackgroundImage = Resources.img_Maximize1;
             }
         }
 
-
+        private void btn_Minimize_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
     }
 
 

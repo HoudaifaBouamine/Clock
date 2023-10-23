@@ -119,13 +119,14 @@
             btn_Minimize.Size = new Size(70, 45);
             btn_Minimize.TabIndex = 2;
             btn_Minimize.UseVisualStyleBackColor = false;
+            btn_Minimize.Click += btn_Minimize_Click;
             btn_Minimize.MouseEnter += btn_Minimize_MouseEnter;
             btn_Minimize.MouseLeave += btn_Minimize_MouseLeave;
             // 
             // btn_Maximize
             // 
             btn_Maximize.BackColor = Color.FromArgb(39, 39, 39);
-            btn_Maximize.BackgroundImage = Properties.Resources.img_Maximize1;
+            btn_Maximize.BackgroundImage = Properties.Resources.img_Maximize3;
             btn_Maximize.BackgroundImageLayout = ImageLayout.Center;
             btn_Maximize.Dock = DockStyle.Right;
             btn_Maximize.FlatAppearance.BorderSize = 0;
