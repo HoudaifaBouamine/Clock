@@ -258,6 +258,9 @@
             // 
             // btn_WorldClock
             // 
+            btn_WorldClock.Animated = true;
+            btn_WorldClock.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btn_WorldClock.CheckedState.FillColor = Color.FromArgb(70, 70, 70);
             btn_WorldClock.CustomizableEdges = customizableEdges11;
             btn_WorldClock.DisabledState.BorderColor = Color.DarkGray;
             btn_WorldClock.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -284,6 +287,9 @@
             // 
             // btn_Stopwatch
             // 
+            btn_Stopwatch.Animated = true;
+            btn_Stopwatch.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btn_Stopwatch.CheckedState.FillColor = Color.FromArgb(70, 70, 70);
             btn_Stopwatch.CustomizableEdges = customizableEdges13;
             btn_Stopwatch.DisabledState.BorderColor = Color.DarkGray;
             btn_Stopwatch.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -310,6 +316,9 @@
             // 
             // btn_Alarm
             // 
+            btn_Alarm.Animated = true;
+            btn_Alarm.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btn_Alarm.CheckedState.FillColor = Color.FromArgb(70, 70, 70);
             btn_Alarm.CustomizableEdges = customizableEdges15;
             btn_Alarm.DisabledState.BorderColor = Color.DarkGray;
             btn_Alarm.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -336,6 +345,9 @@
             // 
             // btn_Timer
             // 
+            btn_Timer.Animated = true;
+            btn_Timer.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btn_Timer.CheckedState.FillColor = Color.FromArgb(70, 70, 70);
             btn_Timer.CustomizableEdges = customizableEdges17;
             btn_Timer.DisabledState.BorderColor = Color.DarkGray;
             btn_Timer.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -362,6 +374,9 @@
             // 
             // btn_FocusSessions
             // 
+            btn_FocusSessions.Animated = true;
+            btn_FocusSessions.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btn_FocusSessions.CheckedState.FillColor = Color.FromArgb(70, 70, 70);
             btn_FocusSessions.CustomizableEdges = customizableEdges19;
             btn_FocusSessions.DisabledState.BorderColor = Color.DarkGray;
             btn_FocusSessions.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -494,6 +509,7 @@
             pnl_MainContantHeader.Name = "pnl_MainContantHeader";
             pnl_MainContantHeader.Size = new Size(692, 40);
             pnl_MainContantHeader.TabIndex = 1;
+            pnl_MainContantHeader.Paint += pnl_MainContantHeader_Paint;
             pnl_MainContantHeader.MouseDown += pnl_MainContantHeader_MouseDown;
             // 
             // btn_Minimize
@@ -603,7 +619,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_WorldClock;
         private Guna.UI2.WinForms.Guna2Button btn_Stopwatch;
         private Guna.UI2.WinForms.Guna2Button btn_Alarm;
-        private Guna.UI2.WinForms.Guna2Button btn_Timer;
         private Guna.UI2.WinForms.Guna2Panel pnl_Main;
         private Guna.UI2.WinForms.Guna2Button btn_WorldClockSmall;
         private Guna.UI2.WinForms.Guna2Button btn_StopwatchSmall;
@@ -611,5 +626,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_TimerSmall;
         private Guna.UI2.WinForms.Guna2Button btn_FocusSessionsSmall;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_Timer;
     }
 }

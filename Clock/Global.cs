@@ -39,8 +39,7 @@ namespace Clock
             {enCurrentScreen.WorldClock,new frm_WorldClock()  {Visible = false,TopLevel = false ,Dock = DockStyle.Fill}} ,
         };
 
-        private static Panel _Container = null;
-
+        private static Panel? _Container = null;
 
         public static Panel ScreensContainer
         {

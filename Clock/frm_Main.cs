@@ -27,10 +27,10 @@ namespace Clock
         protected override void OnPaint(PaintEventArgs e) // you can safely omit this method if you want
         {
             Brush brush = new SolidBrush(Color.FromArgb(255, 255, 255));
-            e.Graphics.FillRectangle(new SolidBrush((clsSettings.MainContantBackGroundColor)), Top);
-            e.Graphics.FillRectangle(new SolidBrush((clsSettings.SideMenuBackGroundColor)), Left);
-            e.Graphics.FillRectangle(new SolidBrush((clsSettings.MainContantBackGroundColor)), Right);
-            e.Graphics.FillRectangle(new SolidBrush((clsSettings.MainContantBackGroundColor)), Bottom);
+            e.Graphics.FillRectangle(new SolidBrush((clsSettings.MainContantBackGroundColor)), RectTop);
+            e.Graphics.FillRectangle(new SolidBrush((clsSettings.SideMenuBackGroundColor)), RectLeft);
+            e.Graphics.FillRectangle(new SolidBrush((clsSettings.MainContantBackGroundColor)), RectRight);
+            e.Graphics.FillRectangle(new SolidBrush((clsSettings.MainContantBackGroundColor)), RectBottom);
         }
 
         private const int
@@ -45,10 +45,10 @@ namespace Clock
 
         const int Thikness = 4; // you can rename this variable if you like
 
-        Rectangle Top { get { return new Rectangle(0, 0, this.ClientSize.Width, Thikness); } }
-        Rectangle Left { get { return new Rectangle(0, 0, Thikness, this.ClientSize.Height); } }
-        Rectangle Bottom { get { return new Rectangle(0, this.ClientSize.Height - Thikness, this.ClientSize.Width, Thikness); } }
-        Rectangle Right { get { return new Rectangle(this.ClientSize.Width - Thikness, 0, Thikness, this.ClientSize.Height); } }
+        Rectangle RectTop { get { return new Rectangle(0, 0, this.ClientSize.Width, Thikness); } }
+        Rectangle RectLeft { get { return new Rectangle(0, 0, Thikness, this.ClientSize.Height); } }
+        Rectangle RectBottom { get { return new Rectangle(0, this.ClientSize.Height - Thikness, this.ClientSize.Width, Thikness); } }
+        Rectangle RectRight { get { return new Rectangle(this.ClientSize.Width - Thikness, 0, Thikness, this.ClientSize.Height); } }
 
         Rectangle TopLeft { get { return new Rectangle(0, 0, Thikness, Thikness); } }
         Rectangle TopRight { get { return new Rectangle(this.ClientSize.Width - Thikness, 0, Thikness, Thikness); } }
@@ -71,10 +71,10 @@ namespace Clock
                 else if (BottomLeft.Contains(cursor)) message.Result = (IntPtr)HTBOTTOMLEFT;
                 else if (BottomRight.Contains(cursor)) message.Result = (IntPtr)HTBOTTOMRIGHT;
 
-                else if (Top.Contains(cursor)) message.Result = (IntPtr)HTTOP;
-                else if (Left.Contains(cursor)) message.Result = (IntPtr)HTLEFT;
-                else if (Right.Contains(cursor)) message.Result = (IntPtr)HTRIGHT;
-                else if (Bottom.Contains(cursor)) message.Result = (IntPtr)HTBOTTOM;
+                else if (RectTop.Contains(cursor)) message.Result = (IntPtr)HTTOP;
+                else if (RectLeft.Contains(cursor)) message.Result = (IntPtr)HTLEFT;
+                else if (RectRight.Contains(cursor)) message.Result = (IntPtr)HTRIGHT;
+                else if (RectBottom.Contains(cursor)) message.Result = (IntPtr)HTBOTTOM;
 
             }
         }
@@ -239,6 +239,11 @@ namespace Clock
         private void btn_WorldClock_Click(object sender, EventArgs e)
         {
             clsGlobal.CurrentScreen = clsGlobal.enCurrentScreen.WorldClock;
+        }
+
+        private void pnl_MainContantHeader_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
