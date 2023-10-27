@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Clock.Forms_Librery
 {
-    public partial class ucTimer : UserControl
+    public partial class ucFocusSessionsScreen : UserControl
     {
-        public ucTimer()
+        public ucFocusSessionsScreen()
         {
             InitializeComponent();
         }

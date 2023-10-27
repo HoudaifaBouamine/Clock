@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Clock.Forms_Librery;
 
-namespace Clock
+namespace Clock.Global
 {
     static internal class clsGlobal
     {
@@ -30,13 +30,13 @@ namespace Clock
             }
         }
 
-        private static Dictionary<enCurrentScreen, UserControl> UserControls = new Dictionary<enCurrentScreen, UserControl>() 
+        private static Dictionary<enCurrentScreen, UserControl> UserControls = new Dictionary<enCurrentScreen, UserControl>()
         {
-            {enCurrentScreen.FocusSessions,new ucFocusSessions(){ Visible = false ,Dock = DockStyle.Fill} } ,
-            {enCurrentScreen.Timer,new ucTimer() {Visible = false,Dock = DockStyle.Fill} } ,
-            {enCurrentScreen.Alarm,new ucAlarm()  {Visible = false,Dock = DockStyle.Fill }} ,
-            {enCurrentScreen.Stopwatch,new ucStopwatch()  {Visible = false ,Dock = DockStyle.Fill}} ,
-            {enCurrentScreen.WorldClock,new ucWorldClock()  {Visible = false,Dock = DockStyle.Fill}} ,
+            {enCurrentScreen.FocusSessions,new ucFocusSessionsScreen(){ Visible = false ,Dock = DockStyle.Fill} } ,
+            {enCurrentScreen.Timer,new ucTimerScreen() {Visible = false,Dock = DockStyle.Fill} } ,
+            {enCurrentScreen.Alarm,new ucAlarmScreen()  {Visible = false,Dock = DockStyle.Fill }} ,
+            {enCurrentScreen.Stopwatch,new ucStopwatchScreen()  {Visible = false ,Dock = DockStyle.Fill}} ,
+            {enCurrentScreen.WorldClock,new ucWorldClockScreen()  {Visible = false,Dock = DockStyle.Fill}} ,
         };
 
         private static Panel? _Container = null;
@@ -50,7 +50,7 @@ namespace Clock
 
             set
             {
-                
+
 
                 if (_Container == value) return;
 
@@ -70,6 +70,6 @@ namespace Clock
 
             }
         }
-        
+
     }
 }

@@ -13,14 +13,28 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UserControls\UserControls.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Compile Update="Main User Controls\ucAlarmScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Main User Controls\ucFocusSessionsScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Main User Controls\ucStopwatchScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Main User Controls\ucTimerScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Main User Controls\ucWorldClockScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Secondary User Controls\ucAlarm.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 

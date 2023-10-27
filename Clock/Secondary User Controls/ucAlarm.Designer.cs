@@ -1,6 +1,6 @@
-﻿namespace Clock.Forms_Librery
+﻿namespace UserControls.Secondary_User_Controls
 {
-    partial class ucFocusSessions
+    partial class ucAlarm
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,16 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
-            // 
-            // frm_FocusSessions
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Red;
-            Name = "frm_FocusSessions";
-            Size = new Size(651, 337);
-            ResumeLayout(false);
+            components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         }
 
         #endregion

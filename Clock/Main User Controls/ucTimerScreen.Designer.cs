@@ -1,6 +1,6 @@
 ﻿namespace Clock.Forms_Librery
 {
-    partial class ucTimer
+    partial class ucTimerScreen
     {
         /// <summary> 
         /// Required designer variable.

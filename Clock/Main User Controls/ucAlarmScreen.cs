@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Clock.Forms_Librery
 {
-    public partial class ucStopwatch : UserControl
+    public partial class ucAlarmScreen : UserControl
     {
-        public ucStopwatch()
+        public ucAlarmScreen()
         {
             InitializeComponent();
         }

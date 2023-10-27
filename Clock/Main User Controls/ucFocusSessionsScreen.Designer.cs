@@ -1,6 +1,6 @@
 ﻿namespace Clock.Forms_Librery
 {
-    partial class ucStopwatch
+    partial class ucFocusSessionsScreen
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,12 +30,13 @@
         {
             SuspendLayout();
             // 
-            // frm_Stopwatch
+            // frm_FocusSessions
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Lime;
-            Name = "frm_Stopwatch";
+            BackColor = Color.Red;
+            Name = "frm_FocusSessions";
+            Size = new Size(651, 337);
             ResumeLayout(false);
         }
 

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Clock.Forms_Librery
+namespace UserControls.Secondary_User_Controls
 {
-    public partial class ucWorldClock : UserControl
+    public partial class ucAlarm : UserControl
     {
-        public ucWorldClock()
+        public ucAlarm()
         {
             InitializeComponent();
         }
