@@ -1,13 +1,13 @@
 ﻿namespace Clock.Forms_Librery
 {
-    partial class frm_FocusSessions
+    partial class ucFocusSessions
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,10 +20,10 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -34,11 +34,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 128, 128);
-            ClientSize = new Size(800, 450);
-            FormBorderStyle = FormBorderStyle.None;
+            BackColor = Color.Red;
             Name = "frm_FocusSessions";
-            Text = "frm_FocusSessions";
+            Size = new Size(651, 337);
             ResumeLayout(false);
         }
 

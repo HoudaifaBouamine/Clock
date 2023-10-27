@@ -24,24 +24,24 @@ namespace Clock
                 if (_CurrentScreen == value) return;
 
 
-                _InnerForms[_CurrentScreen].Visible = false;
+                UserControls[_CurrentScreen].Visible = false;
                 _CurrentScreen = value;
-                _InnerForms[_CurrentScreen].Visible = true;
+                UserControls[_CurrentScreen].Visible = true;
             }
         }
 
-        private static Dictionary<enCurrentScreen, Form> _InnerForms = new Dictionary<enCurrentScreen, Form>() 
+        private static Dictionary<enCurrentScreen, UserControl> UserControls = new Dictionary<enCurrentScreen, UserControl>() 
         {
-            {enCurrentScreen.FocusSessions,new frm_FocusSessions(){ Visible = false,TopLevel = false ,Dock = DockStyle.Fill} } ,
-            {enCurrentScreen.Timer,new frm_Timer() {Visible = false,TopLevel = false ,Dock = DockStyle.Fill} } ,
-            {enCurrentScreen.Alarm,new frm_Alarm()  {Visible = false,TopLevel = false,Dock = DockStyle.Fill }} ,
-            {enCurrentScreen.Stopwatch,new frm_Stopwatch()  {Visible = false,TopLevel = false ,Dock = DockStyle.Fill}} ,
-            {enCurrentScreen.WorldClock,new frm_WorldClock()  {Visible = false,TopLevel = false ,Dock = DockStyle.Fill}} ,
+            {enCurrentScreen.FocusSessions,new ucFocusSessions(){ Visible = false ,Dock = DockStyle.Fill} } ,
+            {enCurrentScreen.Timer,new ucTimer() {Visible = false,Dock = DockStyle.Fill} } ,
+            {enCurrentScreen.Alarm,new ucAlarm()  {Visible = false,Dock = DockStyle.Fill }} ,
+            {enCurrentScreen.Stopwatch,new ucStopwatch()  {Visible = false ,Dock = DockStyle.Fill}} ,
+            {enCurrentScreen.WorldClock,new ucWorldClock()  {Visible = false,Dock = DockStyle.Fill}} ,
         };
 
         private static Panel? _Container = null;
 
-        public static Panel ScreensContainer
+        public static Panel? ScreensContainer
         {
             get
             {
@@ -50,18 +50,23 @@ namespace Clock
 
             set
             {
+                
+
                 if (_Container == value) return;
 
                 _Container = value;
+
+                if (_Container == null) return;
+
                 _Container.Controls.Clear();
-                _Container.Controls.Add(_InnerForms[enCurrentScreen.FocusSessions]);
-                _Container.Controls.Add(_InnerForms[enCurrentScreen.Timer]);
-                _Container.Controls.Add(_InnerForms[enCurrentScreen.Alarm]);
-                _Container.Controls.Add(_InnerForms[enCurrentScreen.Stopwatch]);
-                _Container.Controls.Add(_InnerForms[enCurrentScreen.WorldClock]);
-                _InnerForms[_CurrentScreen].Visible = true;
-                _InnerForms[_CurrentScreen].BringToFront();
-                _InnerForms[_CurrentScreen].Select();
+                _Container.Controls.Add(UserControls[enCurrentScreen.FocusSessions]);
+                _Container.Controls.Add(UserControls[enCurrentScreen.Timer]);
+                _Container.Controls.Add(UserControls[enCurrentScreen.Alarm]);
+                _Container.Controls.Add(UserControls[enCurrentScreen.Stopwatch]);
+                _Container.Controls.Add(UserControls[enCurrentScreen.WorldClock]);
+                UserControls[_CurrentScreen].Visible = true;
+                UserControls[_CurrentScreen].BringToFront();
+                UserControls[_CurrentScreen].Select();
 
             }
         }

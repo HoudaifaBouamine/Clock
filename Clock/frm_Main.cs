@@ -20,7 +20,9 @@ namespace Clock
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true); // this is to avoid visual artifacts
 
+
             clsGlobal.ScreensContainer = pnl_Main;
+            btn_FocusSessions.PerformClick();
         }
 
         #region Resize Window

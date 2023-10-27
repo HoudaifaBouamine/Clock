@@ -1,13 +1,13 @@
 ﻿namespace Clock.Forms_Librery
 {
-    partial class frm_Stopwatch
+    partial class ucTimer
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,25 +20,22 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             SuspendLayout();
             // 
-            // frm_Stopwatch
+            // frm_Timer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(128, 255, 128);
-            ClientSize = new Size(800, 450);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "frm_Stopwatch";
-            Text = "frm_Stopwatch";
+            BackColor = Color.FromArgb(0, 192, 192);
+            Name = "frm_Timer";
             ResumeLayout(false);
         }
 

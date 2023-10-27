@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Clock.Forms_Librery
 {
-    public partial class frm_WorldClock : Form
+    public partial class ucFocusSessions : UserControl
     {
-        public frm_WorldClock()
+        public ucFocusSessions()
         {
             InitializeComponent();
         }
